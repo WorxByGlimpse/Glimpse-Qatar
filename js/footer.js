@@ -29,7 +29,7 @@ footer.innerHTML = `
       <!-- TODO(Qatar): placeholder address, map link and phone. See QATAR-LAUNCH-CHECKLIST.md -->
       <div class="loc-col-item">
         <a href="#!" class="text-decoration-none text-white">Qatar</a>
-        <p class="sub-location"><a href="#!" title="Address">[QATAR OFFICE ADDRESS], Doha, Qatar</a><br><a href="tel:+97400000000">+974 0000 0000</a></p>
+        <p class="sub-location"><a href="#!" title="Address">[QATAR OFFICE ADDRESS], Doha, Qatar</a><br><a href="tel:+97400000000">+974 0000 0000</a><br>Sunday to Thursday, 9:00 to 18:00</p>
       </div>
       <div class="loc-col-item">
         <a href="https://www.theglimpseproject.com/" target="_blank" class="text-decoration-none text-white">United Arab Emirates</a>
@@ -99,6 +99,21 @@ footer.innerHTML = `
       <!-- Links -->
       <h6 class="fw-bold mb-4 gradient-text-small">Industries</h6>
       <p>
+        <a href="/pages/industries/government" class="text-decoration-none text-white">Government</a>
+      </p>
+      <p>
+        <a href="/pages/industries/sports-and-events" class="text-decoration-none text-white">Sports & Events</a>
+      </p>
+      <p>
+        <a href="/pages/industries/real-estate" class="text-decoration-none text-white">Real Estate</a>
+      </p>
+      <p>
+        <a href="/pages/industries/hospitality-and-tourism" class="text-decoration-none text-white">Hospitality & Tourism</a>
+      </p>
+      <p>
+        <a href="/pages/industries/banking-and-finance" class="text-decoration-none text-white">Banking & Finance</a>
+      </p>
+      <p>
       <a href="/pages/industries/luxury-and-fashion" class="text-decoration-none text-white">Luxury & Fashion</a>
       </p>
       <p>
@@ -112,9 +127,6 @@ footer.innerHTML = `
       </p>
       <p>
         <a href="/pages/industries/electronics-and-appliances" class="text-decoration-none text-white">Electronics&nbsp;&&nbsp;Appliances</a>
-      </p>
-      <p>
-        <a href="/pages/industries/government" class="text-decoration-none text-white">Government</a>
       </p>
     </div>
     <!-- Grid column -->
@@ -168,7 +180,8 @@ footer.innerHTML = `
     </div>
   </div>
   <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 gap-4 px-4 text-white" style="font-size: 0.8rem">
-    <p>All rights reserved 2026 © Glimpse Media LLC. Licensed by the Qatar Financial Centre Authority, QFC No. 05559</p>
+    <p>All rights reserved 2026 © Glimpse Media LLC</p>
+    <p class="qfc-licence">Licensed by the Qatar Financial Centre Authority · QFC No. 05559</p>
     <p><a href="#!" class="text-white">[QATAR OFFICE ADDRESS], Doha, Qatar.</a></p>
   </div>
 </footer>

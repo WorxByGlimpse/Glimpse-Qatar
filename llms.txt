@@ -12,6 +12,7 @@
 - Website: https://www.theglimpseproject.qa/
 - Areas served: Doha, Lusail, Al Rayyan, Al Wakrah and the rest of Qatar, plus the wider GCC through Glimpse's regional offices
 - Languages: English and Arabic
+- Office hours: Sunday to Thursday, 9:00 to 18:00 (Qatar time)
 - Group: Glimpse Digital Agency, headquartered in Dubai, with offices in Qatar, the UAE, Saudi Arabia, France and Lebanon
 - Recognition: MENA Agency of the Year 2022-2023
 - UAE website (sister site): https://www.theglimpseproject.com/
@@ -32,12 +33,16 @@
 - [Augmented Reality Marketing](https://www.theglimpseproject.qa/pages/services/ar): AR filters, immersive product experiences and activations.
 
 ## Industries
-- [Automotive](https://www.theglimpseproject.qa/pages/industries/automotive)
-- [Electronics and Appliances](https://www.theglimpseproject.qa/pages/industries/electronics-and-appliances)
-- [Entertainment](https://www.theglimpseproject.qa/pages/industries/entertainment)
-- [Food and Beverages](https://www.theglimpseproject.qa/pages/industries/food-and-beverages)
-- [Government](https://www.theglimpseproject.qa/pages/industries/government)
+- [Government](https://www.theglimpseproject.qa/pages/industries/government): Bilingual public sector communication, accessible websites and awareness campaigns.
+- [Sports and Events](https://www.theglimpseproject.qa/pages/industries/sports-and-events): Ticketing campaigns, fan engagement, sponsorship content and event coverage.
+- [Real Estate](https://www.theglimpseproject.qa/pages/industries/real-estate): Lead generation, landing pages and property video for developers and brokers.
+- [Hospitality and Tourism](https://www.theglimpseproject.qa/pages/industries/hospitality-and-tourism): Local SEO, review management, influencer visits and seasonal campaigns.
+- [Banking and Finance](https://www.theglimpseproject.qa/pages/industries/banking-and-finance): Product campaigns, digital onboarding and reputation management for financial brands.
 - [Luxury and Fashion](https://www.theglimpseproject.qa/pages/industries/luxury-and-fashion)
+- [Automotive](https://www.theglimpseproject.qa/pages/industries/automotive)
+- [Food and Beverages](https://www.theglimpseproject.qa/pages/industries/food-and-beverages)
+- [Entertainment](https://www.theglimpseproject.qa/pages/industries/entertainment)
+- [Electronics and Appliances](https://www.theglimpseproject.qa/pages/industries/electronics-and-appliances)
 
 ## Company
 - [Home](https://www.theglimpseproject.qa/): Digital marketing agency in Doha, Qatar.
@@ -50,6 +55,14 @@
 - [Book a free consultation](https://www.theglimpseproject.qa/landing/booking)
 - [Privacy Policy](https://www.theglimpseproject.qa/privacy-policy)
 - [Terms of Use](https://www.theglimpseproject.qa/terms-of-use)
+
+## Qatar guides
+- [Digital Marketing in Qatar: A Practical Guide for Brands Entering or Growing in the Market](https://www.theglimpseproject.qa/pages/blog/32-digital-marketing-in-qatar-a-practical-guide-for-brands-entering-or-growing-in-the-market): A practical guide to digital marketing in Qatar: audiences, Arabic and English content, search, social, paid media and the local calendar.
+- [Arabic SEO in Qatar: How to Rank in Both Arabic and English Search](https://www.theglimpseproject.qa/pages/blog/33-arabic-seo-in-qatar-how-to-rank-in-both-arabic-and-english-search): How to rank in Arabic and English search in Qatar: keyword research, site structure, hreflang for ar-QA and en-QA, right-to-left design and local SEO.
+- [Planning Ramadan and Eid Campaigns in Qatar](https://www.theglimpseproject.qa/pages/blog/34-planning-ramadan-and-eid-campaigns-in-qatar): How to plan Ramadan and Eid campaigns in Qatar: timing, tone, creative, media scheduling, community management and a working checklist.
+- [Qatar National Day and National Sport Day: How Brands Can Take Part Well](https://www.theglimpseproject.qa/pages/blog/35-qatar-national-day-and-national-sport-day-how-brands-can-take-part-well): How brands in Qatar can mark Qatar National Day and National Sport Day respectfully, with practical ideas, mistakes to avoid and a planning timeline.
+- [Which Social Media Platforms Matter for Brands in Qatar](https://www.theglimpseproject.qa/pages/blog/36-which-social-media-platforms-matter-for-brands-in-qatar): The role each social media platform tends to play for brands in Qatar, how to choose where to invest, and how to check it against your own data.
+- [Influencer Marketing in Doha: How to Choose Creators and Run a Clean Campaign](https://www.theglimpseproject.qa/pages/blog/37-influencer-marketing-in-doha-how-to-choose-creators-and-run-a-clean-campaign): How to choose creators in Doha, brief and contract them properly, disclose paid partnerships and measure an influencer campaign in Qatar.
 
 ## Portfolio
 Work delivered by Glimpse Digital Agency across the region.

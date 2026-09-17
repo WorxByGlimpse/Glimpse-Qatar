@@ -69,3 +69,16 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 3. Google Search Console: add the property, submit `sitemap.xml`. Same for Bing Webmaster Tools.
 4. Create the Doha Google Business Profile with the exact name, address and phone used on the site.
 5. Add the return hreflang tags on the UAE site (section 3).
+
+## 7. Qatar market round (done, with open items)
+
+Done: formal B2B tone on the homepage, contact and careers pages. Global brands lead the homepage portfolio scroller, the portfolio grid and the testimonials. Four new industry pages (sports and events, real estate, hospitality and tourism, banking and finance), government page rewritten, all industry pages have meta descriptions. Six Qatar blog posts. WhatsApp is the primary call to action, company field on the contact form, Sunday to Thursday 9:00 to 18:00 shown in the footer, contact page, schema and `llms.txt`. Maroon licence mark in the footer. Doha skyline on the contact page.
+
+Open:
+- FIFA World Cup Qatar 2022: the logo now leads the client grids. Waiting on a description of the work before writing anything about it.
+- Arabic version: not started, by decision. Needs RTL layout, an Arabic typeface (Poppins has no Arabic glyphs) and native-speaker review. `scripts/seo.py` is ready for an `ar-QA` alternate.
+- Image credit: `static/images/qatar/doha-skyline-night.jpg` is by Akbar Nemati on Unsplash (photo ID Q8NuHm4PbXc), used under the Unsplash License. Attribution is not required. Replace with Glimpse's own Doha photography when available.
+- The six new blog posts reuse header images from older posts. Replace with new artwork.
+- Privacy policy still has a GDPR section and nothing local. As a QFC company, Glimpse Media LLC most likely falls under the QFC Data Protection Regulations. Needs a lawyer.
+- The "Licensed by the Qatar Financial Centre Authority" line is text only. Check the QFC's rules before using any official QFC or Media City logo.
+- Off-site: Doha Google Business Profile and local directory listings, using the exact name, address and phone shown on the site.

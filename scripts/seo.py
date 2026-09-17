@@ -38,7 +38,18 @@ NOINDEX = {"404.html"}
 CANONICAL_OVERRIDE = {"landing/packages.html": "/"}
 
 # Indexable pages with no counterpart on the UAE site. Self canonical, no hreflang.
-QATAR_ONLY = set()
+QATAR_ONLY = {
+    "pages/industries/sports-and-events.html",
+    "pages/industries/real-estate.html",
+    "pages/industries/hospitality-and-tourism.html",
+    "pages/industries/banking-and-finance.html",
+    "pages/blog/32-digital-marketing-in-qatar-a-practical-guide-for-brands-entering-or-growing-in-the-market.html",
+    "pages/blog/33-arabic-seo-in-qatar-how-to-rank-in-both-arabic-and-english-search.html",
+    "pages/blog/34-planning-ramadan-and-eid-campaigns-in-qatar.html",
+    "pages/blog/35-qatar-national-day-and-national-sport-day-how-brands-can-take-part-well.html",
+    "pages/blog/36-which-social-media-platforms-matter-for-brands-in-qatar.html",
+    "pages/blog/37-influencer-marketing-in-doha-how-to-choose-creators-and-run-a-clean-campaign.html",
+}
 
 # Left out of sitemap.xml. /blog is disallowed in robots.txt (same as the UAE site).
 SITEMAP_EXCLUDE = {"blog.html"}

@@ -246,7 +246,55 @@ const blog = {
     date: "October 15, 2025",
     author: "Fiana Carlos",
     authorImg: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/FIA.png",
- }
+ },
+ 32: {
+    para: "Qatar is a compact market with a very international audience. Here is how to plan languages, search, social, paid media and the local calendar",
+    title: "Digital Marketing in Qatar: A Practical Guide for Brands Entering or Growing in the Market",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/24_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
+ 33: {
+    para: "People in Qatar search in Arabic and in English, and the two behave differently. Here is how to research, structure and measure a bilingual site",
+    title: "Arabic SEO in Qatar: How to Rank in Both Arabic and English Search",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/22_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
+ 34: {
+    para: "Ramadan and Eid change daily routines, media habits and what audiences expect from brands. Here is how to plan timing, tone, creative and media",
+    title: "Planning Ramadan and Eid Campaigns in Qatar",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/26_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
+ 35: {
+    para: "Qatar National Day and National Sport Day are moments of shared pride. Here is how brands can contribute with respect, and what to avoid",
+    title: "Qatar National Day and National Sport Day: How Brands Can Take Part Well",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/23_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
+ 36: {
+    para: "Each platform plays a different role with audiences in Qatar. Here is how to decide where to invest, and how to validate it with your own data",
+    title: "Which Social Media Platforms Matter for Brands in Qatar",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/25_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
+ 37: {
+    para: "Doha is a close-knit market, which makes creator recommendations powerful and mistakes visible. Here is how to select, brief, disclose and measure",
+    title: "Influencer Marketing in Doha: How to Choose Creators and Run a Clean Campaign",
+    img: "https://d3i7ke5fj3tp7c.cloudfront.net/images/blog/blog-dedicated/19_topic.png",
+    date: "September 17, 2026",
+    author: "Glimpse Qatar",
+    authorImg: "/static/images/favicon.png",
+ },
 }
 
 // BLOG CARD

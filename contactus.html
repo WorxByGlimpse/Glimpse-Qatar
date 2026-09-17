@@ -81,8 +81,8 @@
     <!-- navbar ends -->
     <!-- BANNER SECTION -->
     <section class="page__container banner_section">
-      <img width="1600" height="900" src="https://d3i7ke5fj3tp7c.cloudfront.net/images/contact_us/hero.jpg"
-        alt="Glimpse Office showing Glimpse Neon logo and Stairs with cushions" style="border-radius: 3vmin;" />
+      <img width="1600" height="900" src="/static/images/qatar/doha-skyline-night.jpg"
+        alt="Doha West Bay skyline at night, seen from across the bay" style="border-radius: 3vmin;" />
     </section>
 
     <!-- Section -->
@@ -98,13 +98,21 @@
         class="double__stroke" />
       <div class="form__desc-wrap">
         <p class="form_desc">
-          A fresh approach to creating digital experiences. Glimpse Qatar is
-          part of an award-winning digital marketing agency with over 10 years of
-          globally recognized experience. We offer a fresh and proactive
-          approach to design and development of digital experiences with a
-          hands-on attitude. We’re here for you 24/7/365, so don’t hesitate to
-          contact us anytime!
+          Glimpse Qatar is the Doha office of an award-winning digital marketing
+          agency with over 10 years of regional experience. Tell us about your
+          brand and your goals, and a member of our team will reply within one
+          working day. WhatsApp is the fastest way to reach us. Our office is open
+          Sunday to Thursday, 9:00 to 18:00.
         </p>
+      </div>
+      <!-- TODO(Qatar): WhatsApp and phone numbers are placeholders -->
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-4">
+        <a href="https://wa.me/97400000000" target="_blank" rel="noopener" class="btn btn-outline-light gradient rounded-pill px-4">
+          <span class="gradient-text"><i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+97400000000" class="btn btn-outline-light gradient rounded-pill px-4">
+          <span class="gradient-text"><i class="fas fa-phone me-2"></i>+974 0000 0000</span>
+        </a>
       </div>
       <div class="row pb-md-5 align-items-center mt-5 justify-content-center">
         <form class="col-12 col-md-6" id="contact__form" action="https://formspree.io/f/mnqrlako" method="POST"
@@ -115,6 +123,12 @@
           <div class="gradient-box__input">
             <input type="text" name="name" id="name" class="form-control rounded-pill" aria-describedby="nameHelp"
               placeholder="Name" />
+            <small class="error-text"></small>
+          </div>
+          <div class="gradient-box__div-1"></div>
+          <div class="gradient-box__input">
+            <input type="text" name="company" id="company" class="form-control rounded-pill" autocomplete="organization"
+              placeholder="Company" />
             <small class="error-text"></small>
           </div>
           <div class="gradient-box__div-1"></div>

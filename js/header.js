@@ -75,6 +75,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Glimpse Digital Agency",
         "url": "https://www.theglimpseproject.com/"
     },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "09:00",
+        "closes": "18:00"
+    },
     "award": "MENA Agency of the Year 2022-2023",
     "sameAs": [
         "https://www.facebook.com/TheGlimpseProject",

@@ -65,7 +65,7 @@ gsap.to(sections, {
 
 images.forEach(
   (image, i) =>
-  (image.style.backgroundImage = `url(https://d3i7ke5fj3tp7c.cloudfront.net/images/portfolio/${i + 1
+  (image.style.backgroundImage = `url(https://d3i7ke5fj3tp7c.cloudfront.net/images/portfolio/${image.dataset.img || i + 1
     }.webp)`)
 );
 
