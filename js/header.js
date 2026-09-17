@@ -2,12 +2,12 @@ const header = document.getElementById("header");
 
 header.outerHTML = `
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M6KSJH8LWL"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-M6KSJH8LWL');
+  gtag('config', 'G-XXXXXXXXXX');
 </script>
 
 <!-- Google Tag Manager -->
@@ -15,7 +15,7 @@ header.outerHTML = `
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W8X6X6C');</script>
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
 
 
 <!-- Website Schema -->
@@ -23,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "@context" : "https://schema.org",
     "@type" : "WebSite",
     "name" : "The Glimpse Project",
-    "url" : "https://www.theglimpseproject.com/"
+    "url" : "https://www.theglimpseproject.qa/"
     }
 </script>
 
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "name": "Glimpse Digital Agency",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ooIYEzF99wZxYsqdcY9sz-FlzAN9Y4iRlw&s",
     "@id": "/g/11f12705qy",
-    "url": "https://www.theglimpseproject.com/",
+    "url": "https://www.theglimpseproject.qa/",
     "telephone": "+97145655290",
     "address": [
         {
