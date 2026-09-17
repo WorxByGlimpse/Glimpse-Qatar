@@ -44,6 +44,10 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 - `sitemap.xml` is missing `/faq` and blogs 28 to 31, and lists `/blog`, which `robots.txt` blocks.
 - Schema longitude for Dubai and Riyadh is negative (puts the offices in the Atlantic).
 - `video-production` has the same FAQ twice (9 and 10).
+- Mobile menu does not open on about 30 pages (careers, all industry and portfolio pages). `js/mobile-nav.js` uses GSAP before those pages load it, so the script crashes before the hamburger gets its click handler.
+- "Related post" links on blog 30 and 31 point at a file that does not exist (`...businesses%20copy.html`).
+- `carousel.js` and `parallax-slider.js` throw on pages that do not have their elements (7 pages and `landing/packages`). Harmless, but noisy in the console.
+- The S3/CloudFront bucket only sends CORS headers for `www.theglimpseproject.com`, so Lottie animations (header logo, homepage services and client logos) fail on any other host, including the UAE site's own Vercel preview URL.
 
 ## 5. Content to review
 
@@ -53,6 +57,7 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 - Influencer page: the UAE NMC disclosure FAQ was replaced with general wording on paid partnership disclosure in Qatar. Worth a check by someone who knows the local rules.
 - `awards.html` body says "since 2014" while the rest of the site says 2016.
 - Portfolio and clients are unchanged, ready to be swapped for Qatar clients.
+- No `<h1>` on `contactus`, `privacy-policy`, `terms-of-use` and `landing/booking` (their headings are `<p class="title">`). Same on the UAE site. Worth fixing for SEO, left alone for now to keep the design identical.
 - No Arabic version yet. If one is added, extend the hreflang set in `scripts/seo.py` (`ar-QA`).
 
 ## 6. Go-live

@@ -84,6 +84,7 @@ function animate() {
 }
 
 function animateImage() {
+  if (!images.length) return;
   let ratio = current / images[0].clientWidth;
   let intRatioValue;
 

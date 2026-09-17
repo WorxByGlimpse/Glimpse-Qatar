@@ -94,55 +94,68 @@ arrow.onclick = () => {
   }
 }
 
-const tl = gsap.timeline({ paused: true });
-// const tlBtn = gsap.timeline({ duration: 0.5, paused: true });
-// tlBtn
+// The menu animation needs GSAP. Some pages load it after this script or not at
+// all, which used to throw here and leave the hamburger button dead.
+function initMobileMenu() {
+  const tl = gsap.timeline({ paused: true });
+  // const tlBtn = gsap.timeline({ duration: 0.5, paused: true });
+  // tlBtn
 
-tl.to(menu, {
-  duration: 0,
-  opacity: 1,
-  height: "100vh", // change this to 100vh for full-height menu
-  ease: "expo.inOut",
-  zIndex: "99",
-})
-  .to(document.body, {
-    height: "100%",
-    overflow: "hidden",
-  })
-  .to(navBtnFirst, {
-    rotation: 45,
-    transformOrigin: "50% 50%",
-    width: "100%",
-    x: -5,
-    y: 6,
-  })
-  .to(
-    navBtnLast,
-    {
-      rotation: -45,
-      transformOrigin: "-50% 50%",
-      width: "100%",
-      x: 3,
-      y: 12,
-    },
-    "<"
-  )
-  .to(navBtnMiddle, { x: -100, opacity: 0 }, "<");
-tl.from(
-  links,
-  {
-    duration: 0.5,
-    opacity: 0,
-    y: 20,
-    stagger: 0.1,
+  tl.to(menu, {
+    duration: 0,
+    opacity: 1,
+    height: "100vh", // change this to 100vh for full-height menu
     ease: "expo.inOut",
-  },
-  "-=0.5"
-);
+    zIndex: "99",
+  })
+    .to(document.body, {
+      height: "100%",
+      overflow: "hidden",
+    })
+    .to(navBtnFirst, {
+      rotation: 45,
+      transformOrigin: "50% 50%",
+      width: "100%",
+      x: -5,
+      y: 6,
+    })
+    .to(
+      navBtnLast,
+      {
+        rotation: -45,
+        transformOrigin: "-50% 50%",
+        width: "100%",
+        x: 3,
+        y: 12,
+      },
+      "<"
+    )
+    .to(navBtnMiddle, { x: -100, opacity: 0 }, "<");
+  tl.from(
+    links,
+    {
+      duration: 0.5,
+      opacity: 0,
+      y: 20,
+      stagger: 0.1,
+      ease: "expo.inOut",
+    },
+    "-=0.5"
+  );
 
-tl.reverse();
+  tl.reverse();
 
-ham.addEventListener("click", () => {
-  //   tlBtn.reversed(!tlBtn.reversed());
-  tl.reversed(!tl.reversed());
-});
+  ham.addEventListener("click", () => {
+    //   tlBtn.reversed(!tlBtn.reversed());
+    tl.reversed(!tl.reversed());
+  });
+}
+
+if (window.gsap) {
+  initMobileMenu();
+} else {
+  const gsapScript = document.createElement("script");
+  gsapScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js";
+  gsapScript.onload = initMobileMenu;
+  document.head.appendChild(gsapScript);
+}

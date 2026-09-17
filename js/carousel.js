@@ -100,7 +100,9 @@ $(document).ready(function () {
     var slide = $(Parent).attr("data-slide");
     ResCarousel(ell, Parent, slide);
   }
-  var mc = new Hammer(document.querySelector(".MultiCarousel"));
+  var carouselEl = document.querySelector(".MultiCarousel");
+  if (!carouselEl) return;
+  var mc = new Hammer(carouselEl);
   mc.on("panleft panright", function(ev) {
     if (ev.type == "panright") {
       document.querySelector(".leftLst").click();

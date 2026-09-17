@@ -15,7 +15,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="nav-wrap">
           <a id="logo-wrap" href="/"> 
-            <lottie-player src="https://d3i7ke5fj3tp7c.cloudfront.net/images/logo.json" background="transparent" speed="0.7" intermission="2000" renderer="svg" loop autoplay></lottie-player>
+            <lottie-player src="/static/lottie/logo.json" background="transparent" speed="0.7" intermission="2000" renderer="svg" loop autoplay></lottie-player>
           </a>
           <div class="navbar-toggler">
             <span class="nav__toggle"></span>
