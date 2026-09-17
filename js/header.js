@@ -22,129 +22,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json"> {
     "@context" : "https://schema.org",
     "@type" : "WebSite",
-    "name" : "The Glimpse Project",
-    "url" : "https://www.theglimpseproject.qa/"
-    }
-</script>
-
-<!-- Review Schema -->
-<script type="application/ld+json"> {
-    "@context": "https://schema.org/",
-    "@type": "CreativeWorkSeries",
-    "name": "Glimpse Digital Agency",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "bestRating": "5",
-        "ratingCount": "26"
-        }
+    "@id" : "https://www.theglimpseproject.qa/#website",
+    "name" : "Glimpse Qatar",
+    "alternateName" : "Glimpse Digital Agency Qatar",
+    "url" : "https://www.theglimpseproject.qa/",
+    "inLanguage" : "en",
+    "publisher" : { "@id" : "https://www.theglimpseproject.qa/#organization" }
     }
 </script>
 
 <!-- Professional Schema -->
+<!-- TODO(Qatar): telephone, streetAddress, postalCode, geo and hasMap are placeholders. See QATAR-LAUNCH-CHECKLIST.md -->
 <script type="application/ld+json"> {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": ["ProfessionalService", "Organization"],
-    "name": "Glimpse Digital Agency",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ooIYEzF99wZxYsqdcY9sz-FlzAN9Y4iRlw&s",
-    "@id": "/g/11f12705qy",
+    "@id": "https://www.theglimpseproject.qa/#organization",
+    "name": "Glimpse Digital Agency Qatar",
+    "alternateName": "Glimpse Qatar",
+    "description": "Digital marketing agency in Doha, Qatar. SEO, social media, paid media, branding, content production and AR.",
     "url": "https://www.theglimpseproject.qa/",
-    "telephone": "+97145655290",
-    "address": [
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "Office 709 Publishing Pavilion, Dubai Production City",
-            "addressLocality": "Dubai",
-            "addressRegion": "Dubai",
-            "postalCode": "00000",
-            "addressCountry": "AE",
-            "serviceArea": ["Dubai"]
-        },
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "3784 street no 288 Alyasmin",
-            "addressLocality": "Riyadh",
-            "addressRegion": "KSA",
-            "postalCode": "13325",
-            "addressCountry": "SA",
-            "serviceArea": ["Riyadh"]
-        },
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "Avenue de Maine",
-            "addressLocality": "Paris",
-            "addressRegion": "France",
-            "postalCode": "75014",
-            "addressCountry": "FR",
-            "serviceArea": ["France"]
-        },
-        {
-            "@type": "PostalAddress",
-            "streetAddress": "Yaaccoub Building, 1st Floor Luis Abu Charaf Street Achrafieh",
-            "addressLocality": "Beirut",
-            "addressRegion": "Lebanon",
-            "postalCode": "112091",
-            "addressCountry": "LB",
-            "serviceArea": ["Beirut"]
-        }],
-    "priceRange": "Affordable",
-    "hasMap": "https://maps.app.goo.gl/XbspQhLBCAy5aNBUA",
-    "geo": [
-        {
-            "@type": "GeoCoordinates",
-            "latitude": 25.0367204,
-            "longitude": -55.1908277,
-            "address": "Office 709 Publishing Pavilion, Dubai Production City"
-        },
-        {
-            "@type": "GeoCoordinates",
-            "latitude": 24.828640,
-            "longitude": -46.631851,
-            "address": "3784 street no 288 Alyasmin, Riyadh"
-        },
-        {
-            "@type": "GeoCoordinates",
-            "latitude": 48.832750,
-            "longitude": 2.324780,
-            "address": "Avenue de Maine, Paris"
-        },
-        {
-            "@type": "GeoCoordinates",
-            "latitude": 33.885000,
-            "longitude": 35.521820,
-            "address": "Yaaccoub Building, 1st Floor Luis Abu Charaf Street, Achrafieh, Beirut"
-        }],
-    "openingHoursSpecification": [
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Monday",
-            "opens": "09:30",
-            "closes": "18:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Tuesday",
-            "opens": "09:30",
-            "closes": "18:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Wednesday",
-            "opens": "09:30",
-            "closes": "18:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Thursday",
-            "opens": "09:30",
-            "closes": "18:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Friday",
-            "opens": "09:30",
-            "closes": "14:00"
-        }],
+    "logo": "https://www.theglimpseproject.qa/static/images/favicon.png",
+    "image": "https://www.theglimpseproject.qa/static/images/favicon.png",
+    "telephone": "+97400000000",
+    "email": "hello@theglimpseproject.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[QATAR OFFICE ADDRESS]",
+        "addressLocality": "Doha",
+        "addressRegion": "Doha",
+        "addressCountry": "QA"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2854,
+        "longitude": 51.5310
+    },
+    "areaServed": [
+        { "@type": "Country", "name": "Qatar" },
+        { "@type": "City", "name": "Doha" },
+        { "@type": "City", "name": "Lusail" },
+        { "@type": "City", "name": "Al Rayyan" },
+        { "@type": "City", "name": "Al Wakrah" }
+    ],
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "Glimpse Digital Agency",
+        "url": "https://www.theglimpseproject.com/"
+    },
+    "award": "MENA Agency of the Year 2022-2023",
     "sameAs": [
         "https://www.facebook.com/TheGlimpseProject",
         "https://www.linkedin.com/company/glimpse-digital-agency/",

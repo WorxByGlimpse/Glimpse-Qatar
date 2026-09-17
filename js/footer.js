@@ -26,8 +26,13 @@ footer.innerHTML = `
     <div>
       <!-- Links -->
       <h6 class="fw-bold mb-4 gradient-text-small">Locations</h6>
+      <!-- TODO(Qatar): placeholder address, map link and phone. See QATAR-LAUNCH-CHECKLIST.md -->
       <div class="loc-col-item">
-        <a href="#!" class="text-decoration-none text-white">United Arab Emirates</a>
+        <a href="#!" class="text-decoration-none text-white">Qatar</a>
+        <p class="sub-location"><a href="#!" title="Address">[QATAR OFFICE ADDRESS], Doha, Qatar</a><br><a href="tel:+97400000000">+974 0000 0000</a></p>
+      </div>
+      <div class="loc-col-item">
+        <a href="https://www.theglimpseproject.com/" target="_blank" class="text-decoration-none text-white">United Arab Emirates</a>
         <p class="sub-location"><a href="https://maps.app.goo.gl/hZLFWbi8gXT11pNn6" target="_blank" title="Address">Office 709 Publishing Pavilion, Dubai Production City, Dubai, UAE</a></p>
       </div>
       <div class="loc-col-item">
@@ -158,13 +163,13 @@ footer.innerHTML = `
           hello@theglimpseproject.com
         </a>
         <hr />
-        <a href="tel:+971-4-565-5290"> +971 4 565 5290 </a>
+        <a href="tel:+97400000000"> +974 0000 0000 </a>
       </div>
     </div>
   </div>
   <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 gap-4 px-4 text-white" style="font-size: 0.8rem">
     <p>All rights reserved 2022 © Glimpse Digital Agency</p>
-    <p><a href="https://maps.app.goo.gl/twJVT14n6tq7mTXt8" target="_blank" class="text-white">Office 709 Publishing Pavilion, Dubai Production City, Dubai, UAE.</a></p>
+    <p><a href="#!" class="text-white">[QATAR OFFICE ADDRESS], Doha, Qatar.</a></p>
   </div>
 </footer>
     `;
@@ -174,7 +179,7 @@ var extraButtons = document.createElement("div");
 extraButtons.setAttribute("id", "extra-btns");
 extraButtons.innerHTML = `
 <div id="wtsp-btn">
-  <a target="_blank" href="https://wa.me/971555669847">
+  <a target="_blank" href="https://wa.me/97400000000">
   <svg width="50" height="50" viewBox="-400 -425 800 800" xml:space="preserve">
   <g>
     <path fill="#0D9F16" d="M398.75-24.55C398.75,194.91,220.8,373,1.33,373c-219.52,0-397.42-178.09-397.42-397.55
@@ -201,7 +206,7 @@ extraButtons.innerHTML = `
   </a>
 </div>
 <div id="call-btn" style="margin-top: 20px;">
-  <a href="tel:+97145655290">
+  <a href="tel:+97400000000">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
       <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
