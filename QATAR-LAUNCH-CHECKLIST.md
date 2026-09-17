@@ -51,7 +51,9 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 
 ## 5. Content to review
 
-- Terms of Use governing law changed from UAE/Dubai courts to the State of Qatar. Needs legal sign-off, and the legal entity name ("Glimpse Marketing") should be confirmed for Qatar.
+- Legal entity is now Glimpse Media LLC, QFC number 05559, licensed by the Qatar Financial Centre Authority (Terms of Use, Privacy Policy, footer, schema, `llms.txt`). The UAE entity "Glimpse Marketing FZ LLC" has been removed. Source: the incorporation PDF, which is gitignored and must never be committed.
+- Terms of Use governing law currently says "laws of the State of Qatar" and "courts of the State of Qatar". Glimpse Media LLC is a QFC company, and the QFC has its own regulations and its own court. A lawyer should confirm whether the clause should name QFC law and the QFC court instead.
+- The QFC licence covers creating advertising campaigns and marketing and brand consultancy, and says the firm may not physically place advertising material, including on billboards, unless the QFCA permits it. `pages/services/advertising.html` says "We plan and execute campaigns across ... traditional OOH (billboards, transit)" and lists "Billboards | Hoardings". Planning and designing outdoor ads is covered. Confirm the wording is fine or soften "execute".
 - Removed from schema because they belong to the Dubai listing: Google Business Profile ID, the 4.8/26 review rating, opening hours. Add Qatar values when the Doha Google Business Profile exists.
 - Copy says Glimpse has a team in Doha, backed by the group founded in 2016 and MENA Agency of the Year 2022-2023. It does not claim history, clients or stats in Qatar.
 - Influencer page: the UAE NMC disclosure FAQ was replaced with general wording on paid partnership disclosure in Qatar. Worth a check by someone who knows the local rules.

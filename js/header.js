@@ -38,7 +38,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "@type": ["ProfessionalService", "Organization"],
     "@id": "https://www.theglimpseproject.qa/#organization",
     "name": "Glimpse Digital Agency Qatar",
+    "legalName": "Glimpse Media LLC",
     "alternateName": "Glimpse Qatar",
+    "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "QFC Number",
+        "value": "05559"
+    },
     "description": "Digital marketing agency in Doha, Qatar. SEO, social media, paid media, branding, content production and AR.",
     "url": "https://www.theglimpseproject.qa/",
     "logo": "https://www.theglimpseproject.qa/static/images/favicon.png",
