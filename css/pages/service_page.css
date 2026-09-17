@@ -1,0 +1,164 @@
+.service-title_wrap {
+  width: 100%;
+}
+
+.service-title_wrap .logo {
+
+  width: 300px;
+  height: 100%;
+  max-width: 165px;
+}
+
+.service-page__icon {
+  aspect-ratio: 1/1;
+  width: 6rem;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.service-page__icon+p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.service-page__icon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+#service-page__carousel .carousel-indicators>button {
+  border-radius: 1rem;
+  opacity: 1 !important;
+}
+
+#service-page__carousel .carousel-indicators>button.active {
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0);
+  border: solid 2px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)),
+    var(--text-gradient);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#service-page__carousel .carousel-inner {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.innerpage__title {
+  font-size: 2rem;
+  font-family: "Cera Pro Bold";
+  letter-spacing: 0.1rem;
+  line-height: 1.2;
+}
+
+.innerpage__section-wrapper {
+  padding: 0;
+  margin: 1.3rem auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.5;
+  padding: 2rem 0;
+}
+
+.innerpage__section-wrapper:last-of-type {
+  margin: 5.3rem auto;
+  margin-top: calc(5.3rem - 1rem);
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.innerpage__img {
+  max-width: 100%;
+  padding: 0 1rem;
+  object-fit: contain;
+}
+
+.innerpage__img-title {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-family: "Cera Pro Regular", sans-serif;
+  word-spacing: 0.1rem;
+}
+
+.innerpage__section-title {
+  font-family: "Cera Pro Bold", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 2560px) {
+  .logo {
+    max-width: 280px;
+  }
+
+  .innerpage__title {
+    font-size: 80px;
+  }
+
+  .innerpage__section-wrapper {
+    font-size: 34px;
+  }
+
+  .innerpage__section-title {
+    font-size: 40px;
+  }
+
+  .innerpage__img {
+    max-width: 500px;
+  }
+
+  .innerpage__img-title {
+    font-size: 34px;
+
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .innerpage__title {
+    font-size: 1.5rem;
+    font-family: "Cera Pro Bold";
+    letter-spacing: 0.1rem;
+    line-height: 1.2;
+  }
+
+  .service-title_wrap {
+    padding-top: var(--r30);
+  }
+
+  .service-title_wrap .logo {
+    max-width: 65px;
+  }
+
+  .innerpage__section-wrapper {
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: var(--r16) 0;
+  }
+
+  .innerpage__section-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .innerpage__section-wrapper:last-of-type {
+    margin-top: calc(1.3rem + 2rem);
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Book Your Free Consultation | Glimpse Digital Marketing Agency Dubai</title>
+    <meta name="description"
+        content="Book a free consultation with Glimpse, award-winning digital marketing agency in Dubai. Tell us about your business and schedule a call.">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://www.theglimpseproject.com/landing/booking">
+    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link defer rel="stylesheet" href="/css/index.css" />
+    <link defer rel="stylesheet" href="/css/pages/homepage.css" />
+    <link defer rel="stylesheet" href="/css/shared/navbar.css" />
+    <link defer rel="stylesheet" href="/css/shared/footer.css" />
+    <link defer rel="stylesheet" href="/css/pages/contact_us.css" />
+    <link defer rel="shortcut icon" href="/static/images/favicon.png" type="image/png" />
+    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link defer rel="stylesheet" href="/css/shared/scroll-anim.css">
+    <link id="header" />
+    <style>
+        .booking__section {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        .booking-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            align-items: stretch;
+        }
+
+        .booking-layout > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-label {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-label-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.65);
+            letter-spacing: 0.02em;
+        }
+
+        .booking-form-col {
+            border: 0px solid transparent;
+            border-radius: 16px;
+            background:
+                linear-gradient(#0D0B17, #0D0B17) padding-box,
+                linear-gradient(to right, #7237BD, #FD0988) border-box;
+            padding: 0rem;
+            flex: 1;
+        }
+
+        /* Locked package field */
+        .package-field-wrap {
+            position: relative;
+        }
+
+        .package-field-wrap .lock-icon {
+            position: absolute;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.8rem;
+            pointer-events: none;
+        }
+
+        #booking__form select {
+            width: 100%;
+            border-radius: 500px;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            height: 3.5rem;
+            color: #fff !important;
+            padding: 0 3rem 0 1.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            appearance: none;
+            cursor: not-allowed;
+            opacity: 0.85;
+        }
+
+        #booking__form select option {
+            background: #0D0B17;
+            color: #fff;
+        }
+
+        /* Override contact_us.css form padding for our layout */
+        #booking__form {
+            padding: 0;
+        }
+
+        #booking__form input:focus,
+        #booking__form textarea {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            transition: none;
+        }
+
+        #booking__form input::placeholder,
+        #booking__form textarea::placeholder {
+            color: #fff !important;
+            opacity: 1;
+            font-size: 1rem;
+        }
+
+        #booking__form textarea {
+            line-height: 41px;
+            background-image:
+                -webkit-linear-gradient(left, var(--bg-color) 0, transparent 0),
+                -webkit-linear-gradient(right, var(--bg-color) 0, transparent 0),
+                -webkit-linear-gradient(var(--bg-color) 40px, #404040 40px, #404040 41px, var(--bg-color) 41px);
+            background-repeat: repeat-y;
+            background-size: 100% 100%, 100% 100%, 100% 41px;
+            background-attachment: local;
+            background-color: var(--bg-color) !important;
+            border: 10px solid var(--bg-color) !important;
+            color: #fff !important;
+            overflow: auto;
+        }
+
+        /* Replace the fragile z-index::before trick with the reliable padding-box/border-box technique */
+        #booking__form .gradient-box__input {
+            border: 2px solid transparent;
+            background:
+                linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+                linear-gradient(90deg, #fcdc00 0%, #fbc519 10%, #fa954e 32%, #f96e79 53%, #f95397 72%, #f83cb0 100%) border-box;
+        }
+
+        #booking__form .gradient-box__input::before {
+            display: none;
+        }
+
+        #booking__form .gradient-box__div-2 {
+            background:
+                linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+                linear-gradient(90deg, #fcdc00 0%, #fbc519 10%, #fa954e 32%, #f96e79 53%, #f95397 72%, #f83cb0 100%) border-box;
+        }
+
+        #booking__form .gradient-box__div-2::after {
+            display: none;
+        }
+
+        /* ── Calendar ── */
+        .booking-calendar-wrap {
+            position: relative;
+            border: 3px solid transparent;
+            border-radius: 16px;
+            background:
+                linear-gradient(#0D0B17, #0D0B17) padding-box,
+                linear-gradient(to right, #7237BD, #FD0988) border-box;
+            overflow: hidden;
+            /* flex: 1; */
+            height: 834px;
+        }
+
+        #calendly-container,
+        #calendly-widget,
+        .step2-placeholder {
+            height: 100%;
+        }
+
+        #calendly-container {
+            display: none;
+        }
+
+        .step2-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 1.25rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            padding: 2.5rem;
+        }
+
+        .step2-badge {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .booking-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-layout > div {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6KSJH8LWL"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-M6KSJH8LWL');</script>
+</head>
+
+<body>
+    <div id="banner-wrapper" style="overflow: hidden;"></div>
+    <div class="mob-main-menu"></div>
+
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark w-100"></nav>
+
+        <section class="booking__section page__container">
+            <div class="title__wrap">
+                <p class="title">Book Your Free Consultation</p>
+                <img src="https://d3i7ke5fj3tp7c.cloudfront.net/images/particle.svg" alt="particle" height="8px"
+                    width="8px" class="ms-1" />
+                <div class="subtitle__wrap">
+                    <hr style="width: 14%" />
+                </div>
+            </div>
+
+            <div class="booking-layout">
+
+                <!-- Left column: Lead form -->
+                <div>
+                    <div class="step-label">
+                        <div class="step2-badge">1</div>
+                        <span class="step-label-text">Fill in contact form</span>
+                    </div>
+                    <div class="booking-form-col">
+                    <form id="booking__form" action="https://formspree.io/f/xbdwvvjj" method="POST"
+                        enctype="multipart/form-data">
+
+                        <div class="gradient-box__input">
+                            <input type="text" name="company_name" id="company_name" class="form-control rounded-pill"
+                                placeholder="Company Name" />
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Package field — shown only when arriving from packages page -->
+                        <div id="package-field-wrap" style="display:none;">
+                            <div class="gradient-box__div-1"></div>
+                            <div class="gradient-box__input package-field-wrap">
+                                <select name="selected_package" id="selected_package" disabled>
+                                    <option value="growth">Growth Package</option>
+                                    <option value="genz">Gen Z Package</option>
+                                    <option value="advanced">Advanced Package</option>
+                                    <option value="fmcg">FMCG Package</option>
+                                    <option value="automotive">Automotive Lead Generation Package</option>
+                                </select>
+                                <input type="hidden" name="selected_package" id="selected_package_hidden" />
+                                <i class="fa-solid fa-lock lock-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="gradient-box__div-1"></div>
+                        <div class="gradient-box__input">
+                            <input type="text" name="industry" id="industry" class="form-control rounded-pill"
+                                placeholder="Industry (Optional)" />
+                            <small class="error-text"></small>
+                        </div>
+                        <div class="gradient-box__div-1"></div>
+                        <div class="gradient-box__input">
+                            <input type="text" name="name" id="name" class="form-control rounded-pill"
+                                placeholder="Your Name" />
+                            <small class="error-text"></small>
+                        </div>
+                        <div class="gradient-box__div-1"></div>
+                        <div class="gradient-box__input">
+                            <input type="tel" name="phone" id="phone" class="form-control rounded-pill"
+                                placeholder="Phone Number (e.g. +971 50 000 0000)" />
+                            <small class="error-text"></small>
+                        </div>
+                        <div class="gradient-box__div-1"></div>
+                        <div class="gradient-box__input">
+                            <input type="email" name="email" id="email" class="form-control rounded-pill"
+                                placeholder="Email Address" />
+                            <small class="error-text"></small>
+                        </div>
+                        <div class="gradient-box__div-1"></div>
+                        <div class="gradient-box__input">
+                            <input type="text" name="position" id="position" class="form-control rounded-pill"
+                                placeholder="Position / Job Title (Optional)" />
+                            <small class="error-text"></small>
+                        </div>
+                        <div class="gradient-box__div-2">
+                            <div class="textbox_wrapper">
+                                <textarea class="form-control" name="message" id="message" rows="5"
+                                    placeholder="Tell us about your business or what you're looking for... (Optional)"></textarea>
+                                <small class="error-text"></small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-light gradient rounded-pill px-4 mt-4">
+                                <span class="gradient-text">Submit</span>
+                            </button>
+                        </div>
+                        <div class="submit-message__wrap">
+                            <p class="submit-message"></p>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+
+                <!-- Right column: Calendly — unlocked after form submission -->
+                <div>
+                    <div class="step-label">
+                        <div class="step2-badge">2</div>
+                        <span class="step-label-text">Pick your time slot</span>
+                    </div>
+                    <div class="booking-calendar-wrap">
+
+                    <div class="step2-placeholder" id="calendar-step2">
+                        <p style="font-size:0.9rem;line-height:1.8;margin:0;color:rgba(255,255,255,0.45);">Submit the form on the left first —<br>the calendar will unlock automatically.</p>
+                    </div>
+
+                    <div id="calendly-container">
+                        <div id="calendly-widget"></div>
+                    </div>
+
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="footer" class="page__container mt-5 mx-auto">
+            <!-- Footer -->
+        </section>
+    </main>
+
+    <!-- BOOTSTRAP -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JQUERY -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- CUSTOM JS COMPONENTS -->
+    <script defer src="/js/nav.js"></script>
+    <script defer src="/js/mobile-nav.js"></script>
+    <script defer src="/js/footer.js"></script>
+    <script defer src="/js/header.js"></script>
+    <script defer src="/js/scroll-anim.js"></script>
+    <!-- FORM UTILITIES -->
+    <script src="/js/form.js"></script>
+    <script>
+        const packageData = {
+            growth: {
+                name: 'Growth Package',
+                details: 'Services: Social Media Management, Paid Media Management, Content Creation (Static, Motion Graphics), Reporting, Creative Design. Platforms: Instagram, Facebook.'
+            },
+            genz: {
+                name: 'Gen Z Package',
+                details: 'Services: Social Media Management, Paid Media Management, Content Creation (Reels, Memes, Static), Reporting, Creative Direction. Platforms: Instagram, TikTok.'
+            },
+            advanced: {
+                name: 'Advanced Package',
+                details: 'Services: Social Media Management, Paid Media Management, Lead Generation, Content Creation (Reels, Memes, Static, Motion Graphics), Reporting, Creative Direction. Platforms: Instagram, Facebook, TikTok, X, Snapchat, LinkedIn.'
+            },
+            fmcg: {
+                name: 'FMCG Package',
+                details: 'Services: Creative Content Production, E-Commerce Content Optimization, Retail & Shopper Marketing Assets, Performance Marketing, Social Media Management, Reporting & Insights. Platforms: Instagram, Facebook, TikTok, X, Snapchat, LinkedIn.'
+            },
+            automotive: {
+                name: 'Automotive Lead Generation Package',
+                details: 'Services: Strategy & Campaign Planning, Creative Production, Social Media Management, Performance Marketing, Landing Pages & Conversion Optimization, Dealer & Retail Support, Influencer & PR Activation, Reporting & Insights. Platforms: Instagram, Facebook, TikTok, X, Snapchat, LinkedIn.'
+            }
+        };
+
+        // Read package from URL and pre-fill the locked field
+        const urlParams = new URLSearchParams(window.location.search);
+        const packageKey = urlParams.get('package');
+        const selectedPkg = packageKey ? packageData[packageKey] : null;
+
+        if (selectedPkg) {
+            const select = document.getElementById('selected_package');
+            const hidden = document.getElementById('selected_package_hidden');
+            select.value = packageKey;
+            hidden.value = selectedPkg.details;
+            document.getElementById('package-field-wrap').style.display = 'block';
+        }
+
+        let isError = false;
+
+        const form = document.querySelector("#booking__form");
+        const companyName = document.querySelector("#company_name");
+        const name = document.querySelector("#name");
+        const phone = document.querySelector("#phone");
+        const email = document.querySelector("#email");
+        const message = document.querySelector("#message");
+        const status = document.querySelector(".submit-message");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            isError = false;
+            const isValid = handleInput();
+            if (isValid) {
+                const data = new FormData(e.target);
+                fetch(e.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { Accept: "application/json" },
+                }).then((response) => {
+                    if (response.ok) {
+                        status.innerHTML = "Details received! Now pick a time slot on the right.";
+                        form.querySelector("button[type=submit]").disabled = true;
+
+                        const params = new URLSearchParams({
+                            hide_gdpr_banner: '1',
+                            background_color: '0c0b17',
+                            text_color: 'ffffff',
+                            primary_color: 'fcdc00',
+                            name: name.value.trim(),
+                            email: email.value.trim(),
+                            ...(selectedPkg && { a1: selectedPkg.details }),
+                        });
+                        const calendlyUrl = `https://calendly.com/hello-theglimpseproject/30min?${params.toString().replace(/\+/g, '%20')}`;
+
+                        document.getElementById('calendar-step2').style.display = 'none';
+                        document.getElementById('calendly-container').style.display = 'block';
+                        Calendly.initInlineWidget({
+                            url: calendlyUrl,
+                            parentElement: document.getElementById('calendly-widget'),
+                        });
+                    } else {
+                        response.json().then((data) => {
+                            if (Object.hasOwn(data, "errors")) {
+                                status.innerHTML = data["errors"].map((error) => error["message"]).join(", ");
+                            } else {
+                                status.innerHTML = "Oops! There was a problem submitting your form.";
+                            }
+                            setTimeout(() => { status.innerHTML = ""; }, 10000);
+                        });
+                    }
+                });
+            }
+        });
+
+        function handleInput() {
+            const companyValue = companyName.value.trim();
+            const nameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const phoneValue = phone.value.trim();
+
+            if (companyValue === "") {
+                setErrorFor(companyName, "Company name is required");
+            } else {
+                setSuccessFor(companyName);
+            }
+
+            if (nameValue === "") {
+                setErrorFor(name, "Name cannot be empty");
+            } else if (/\d/.test(nameValue)) {
+                setErrorFor(name, "Name cannot contain numbers");
+            } else {
+                setSuccessFor(name);
+            }
+
+            if (emailValue === "") {
+                setErrorFor(email, "Email cannot be empty");
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, "Email is not valid");
+            } else {
+                setSuccessFor(email);
+            }
+
+            if (phoneValue === "") {
+                setErrorFor(phone, "Phone number is required");
+            } else if (!isPhone(phoneValue)) {
+                setErrorFor(phone, "Number is not valid");
+            } else {
+                setSuccessFor(phone);
+            }
+
+            return isError === false;
+        }
+    </script>
+</body>
+
+</html>

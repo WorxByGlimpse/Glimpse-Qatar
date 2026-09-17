@@ -1,0 +1,40 @@
+/* DONT FORGET TO ADD ANY ANIMATION TO TRANSITION */
+
+@media (prefers-reduced-motion: no-preference) {
+    .service_card {
+        filter: opacity(0) blur(3px);
+        transition: transform 1s ease calc(100ms * var(--order)), filter 2s ease;
+        -webkit-transition: transform 1s ease calc(100ms * var(--order)), filter 2s ease;
+        -moz-transition: transform 1s ease calc(100ms * var(--order)), filter 2s ease;
+        -ms-transition: transform 1s ease calc(100ms * var(--order)), filter 2s ease;
+        -o-transition: transform 1s ease calc(100ms * var(--order)), filter 2s ease;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -webkit-filter: opacity(0) blur(3px);
+    }
+
+    .anim_wrapper {
+        scale: 0;
+        filter: blur(5px);
+        transition: scale 1s ease calc(150ms * var(--order));
+        -webkit-transition: scale 1s ease calc(150ms * var(--order));
+        -moz-transition: scale 1s ease calc(150ms * var(--order));
+        -ms-transition: scale 1s ease calc(150ms * var(--order));
+        -o-transition: scale 1s ease calc(150ms * var(--order));
+        -webkit-filter: blur(5px);
+}
+
+    .scrollinate {
+        scale: 1;
+        filter: opacity(1) blur(0);
+        -webkit-filter: opacity(1) blur(0);
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}

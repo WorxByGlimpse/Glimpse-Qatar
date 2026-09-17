@@ -1,0 +1,42 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/" },
+    { "source": "/socialmedia", "destination": "/pages/services/social-media", "statusCode": 301},
+    { "source": "/augmentedreality", "destination": "/pages/services/ar", "statusCode": 301},
+    { "source": "/:path*.html", "destination": "/:path"}
+  ],
+  "cleanUrls": true,
+
+  "headers": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "glimpseserver.com"
+        }
+      ],
+      "headers" : [
+        {
+          "key" : "X-Robots-Tag",
+          "value" : "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.glimpseserver.com"
+        }
+      ],
+      "headers" : [
+        {
+          "key" : "X-Robots-Tag",
+          "value" : "noindex"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Crawl-delay: 10
+Disallow: /blog.html
+Disallow: /blog
+Disallow: /.vscode
+Disallow: /.gitignore
+Disallow: /.htaccess
+Disallow: /vercel.json
+Disallow: /static/fonts/
+
+Sitemap: https://www.theglimpseproject.com/sitemap.xml

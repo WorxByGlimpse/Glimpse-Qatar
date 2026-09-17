@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://www.theglimpseproject.com/careers">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/pages/contact_us.css" />
+    <link rel="stylesheet" href="/css/shared/section-title.css" />
+    <link rel="stylesheet" href="/css/shared/navbar.css" />
+    <link rel="stylesheet" href="/css/shared/footer.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/png" />
+
+    <title>Careers</title>
+    <meta name="description"
+        content="Glimpse is an award-winning agency comprising of professionals from various creative backgrounds, contact with us to find out more!">
+
+    <link id="header"></link>
+    <style>
+        #openings {
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.6rem center/0.85rem 1rem;
+            color: inherit;
+            border: none;
+            height: 4rem;
+            font-size: 1.2rem;
+            padding: 1rem 30px;
+        }
+
+        #openings:hover {
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 560px) {
+            #openings {
+                height: 2.5rem;
+                font-size: 1rem;
+                padding: 0.5rem 30px;
+            }
+        }
+
+        @media screen and (min-width: 2560px) {
+            #openings {
+                font-size: 34px;
+                padding: 0 var(--r30);
+            }
+        }
+        
+        .anim-letter{
+            word-break: keep-all;
+            display: inline-block;
+            transition: transform 1.5s cubic-bezier(0,1,1,1);
+        }
+        .anim-letter:hover {
+            transform: scale(180%);
+            transition: transform 0s cubic-bezier(0,1,1,1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MOBILE MENU -->
+    <div class="mob-main-menu"></div>
+
+    <!-- MOBILE MENU ENDS -->
+    <main>
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg navbar-dark w-100"></nav>
+        <!-- navbar ends -->
+        <!-- BANNER SECTION -->
+        <section class="page__container banner_section" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            <video muted autoplay loop 
+                src="https://d3i7ke5fj3tp7c.cloudfront.net/videos/about-extended.mp4"
+                alt="The Glimpse Team" 
+                style="width: 50%; border-radius: 3vmin;">
+            </video>
+            <h1 class="title" style="text-align: justify; width: 50%; padding: 0 5%;">
+                <span class="anim-letter">J</span><span class="anim-letter">o</span><span class="anim-letter">i</span><span class="anim-letter">n</span>
+                <span class="anim-letter">o</span><span class="anim-letter">u</span><span class="anim-letter">r</span>
+                <span class="anim-letter">t</span><span class="anim-letter">e</span><span class="anim-letter">a</span><span class="anim-letter">m</span>
+                <span class="anim-letter">a</span><span class="anim-letter">n</span><span class="anim-letter">d</span>
+                <span class="anim-letter">b</span><span class="anim-letter">e</span>
+                <span class="anim-letter">o</span><span class="anim-letter">n</span><span class="anim-letter">e</span>
+                <span class="anim-letter">o</span><span class="anim-letter">f</span>
+                <span class="anim-letter">u</span><span class="anim-letter">s</span><span class="anim-letter">!</span>
+            </h1>
+        </section>
+
+        <!-- Section -->
+        <section class="page__container form_section">
+            <div class="title__wrap">
+                <p class="title">Careers</p>
+                <img src="https://d3i7ke5fj3tp7c.cloudfront.net/images/particle.svg" alt="particle" height="8" width="8"
+                    class="ms-1" />
+                <div class="subtitle__wrap">
+                    <hr style="width: 12%" />
+                </div>
+            </div>
+            <img src="https://d3i7ke5fj3tp7c.cloudfront.net/images/contact_us/strokes.svg" alt="strokes" width="153"
+                height="230" class="double__stroke" />
+            <div class="form__desc-wrap">
+                <p class="form_desc">
+                    We’re always looking for the best talent with the right skillset. If you are a creative whizz, a
+                    go-getter, a problem-solver, we want you right here right now.
+                    Shoot us an email with your kickass CV and cover letter today. </p>
+            </div>
+            <div class="row pb-md-5 align-items-center mt-5 justify-content-center">
+                <!--------------------------------- FORM START --------------------------------->
+                <form class="col-12 col-md-6" id="contact__form" action="https://formspree.io/f/mknaallp" method="POST"
+                    enctype="multipart/form-data">
+
+                    <div class="gradient-box__input">
+                        <input type="text" name="name" id="name" class="form-control rounded-pill"
+                            aria-describedby="nameHelp" placeholder="Name" />
+                        <small class="error-text"></small>
+                    </div>
+
+                    <div class="gradient-box__div-1"></div>
+
+                    <div class="gradient-box__input">
+                        <input type="email" name="email" class="form-control rounded-pill" id="email"
+                            aria-describedby="emailHelp" placeholder="Email" />
+                        <small class="error-text"></small>
+                    </div>
+
+                    <div class="gradient-box__div-1"></div>
+
+                    <div class="gradient-box__input">
+                        <input type="tel" name="number" class="form-control rounded-pill" id="number"
+                            aria-describedby="numberHelp" placeholder="Phone" />
+                        <small class="error-text"></small>
+                    </div>
+
+                    <div class="gradient-box__div-1"></div>
+
+                    <div class="gradient-box__input">
+                        <input class="form-control" type="url" id="linkedin" name="linkedin"
+                            placeholder="LinkedIn URL" />
+                        <small class="error-text"></small>
+                    </div>
+
+                    <div class="gradient-box__div-1"></div>
+
+                    <div class="gradient-box__input">
+                        <select class="form-select rounded-pill" name="openings" id="openings">
+                            <option selected="true" value=" ">No Job Openings - Reach out anyway!</option>
+                            <!-- <option disabled value="accountant">Accountant</option>
+                            <option disabled value="marketing">Marketing</option>
+                            <option disabled value="developer">Developer</option>
+                            <option disabled value="designer">Designer</option> -->
+                        </select>
+                    </div>
+
+                    <div class="gradient-box__div-2">
+                        <div class="textbox_wrapper">
+                            <textarea class="form-control" name="message" id="message" rows="5"
+                                placeholder="What's up?"></textarea>
+                            <small class="error-text"></small>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-light gradient rounded-pill px-4 mt-4">
+                            <span class="gradient-text">Send Message</span>
+                        </button>
+                    </div>
+                    <div class="submit-message__wrap">
+                        <p class="submit-message"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Section Ends -->
+        <section id="footer" class="page__container mt-5 mx-auto">
+            <!-- Footer -->
+        </section>
+    </main>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/form.js"></script>
+    <script>
+        let form = document.querySelector("#contact__form");
+        let name = document.querySelector("#name");
+        let email = document.querySelector("#email");
+        let number = document.querySelector("#number");
+        let linkedin = document.querySelector("#linkedin");
+        let openings = document.querySelector("#openings");
+        let message = document.querySelector("#message");
+        let status = document.querySelector(".submit-message");
+        let isError;
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            isError = false;
+            let isValid = handleInput();
+            let data = new FormData(e.target);
+            if (isValid) {
+                fetch(e.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                }).then((response) => {
+                    if (response.ok) {
+                        status.innerHTML =
+                            "Your message has been successfully submitted.";
+                        setTimeout(() => {
+                            form.reset();
+                            status.innerHTML = "";
+                        }, 10000);
+                    } else {
+                        response.json().then((data) => {
+                            if (Object.hasOwn(data, "errors")) {
+                                status.innerHTML = data["errors"]
+                                    .map((error) => error["message"])
+                                    .join(", ");
+                            } else {
+                                status.innerHTML =
+                                    "Oops! There was a problem submitting your form";
+                            }
+                            setTimeout(() => {
+                                status.innerHTML = "";
+                            }, 10000);
+                        });
+                    }
+                });
+            }
+        });
+
+        // What to do with inputs ?
+        function handleInput() {
+            // Values from dom elements ( input )
+            let nameValue = name.value.trim();
+            let emailValue = email.value.trim();
+            let numberValue = number.value.trim();
+            let linkedinValue = linkedin.value.trim();
+            let messageValue = message.value.trim();
+
+            //  Checking for name
+            if (nameValue === "") {
+                setErrorFor(name, "Name cannot be empty");
+            } else if (/\d/.test(nameValue)) {
+                setErrorFor(name, "Name cannot contain numbers");
+            } else {
+                setSuccessFor(name);
+            }
+
+            // Checking for email
+            if (emailValue === "") {
+                setErrorFor(email, "Email cannot be empty");
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, "Email is not valid!");
+            } else {
+                setSuccessFor(email);
+            }
+
+            //Checking for number
+            if (numberValue === "") {
+                setErrorFor(number, "Phone cannot be empty");
+            } else if (numberValue.match(/[a-zA-Z]+/)) {
+                setErrorFor(number, "Phone is not valid!");
+            } else {
+                setSuccessFor(number);
+            }
+
+            // Check for LinkedIn URL
+            if (linkedinValue === "") {
+                setErrorFor(linkedin, "LinkedIn cannot be empty")
+            } else if (linkedinValue.startsWith("https://www.linkedin.com") || linkedinValue.startsWith("https://linkedin.com") || linkedinValue.startsWith("linkedin.com")) {
+                setSuccessFor(linkedin)
+            } else {
+                setErrorFor(linkedin, "Link should start with https://www.linkedin.com")
+            }
+
+            // Checking for message
+            if (messageValue === "") {
+                setErrorFor(message, "Message cannot be empty");
+            } else {
+                setSuccessFor(message);
+            }
+
+            // Checking for errors
+            if (isError === false) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/mobile-nav.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>
