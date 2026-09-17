@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <!-- Professional Schema -->
-<!-- TODO(Qatar): telephone, streetAddress, postalCode, geo and hasMap are placeholders. See QATAR-LAUNCH-CHECKLIST.md -->
+<!-- TODO(Qatar): telephone is still a placeholder. See QATAR-LAUNCH-CHECKLIST.md -->
 <script type="application/ld+json"> {
     "@context": "https://schema.org",
     "@type": ["ProfessionalService", "Organization"],
@@ -53,16 +53,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "email": "hello@theglimpseproject.com",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "[QATAR OFFICE ADDRESS]",
+        "streetAddress": "C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17",
         "addressLocality": "Doha",
         "addressRegion": "Doha",
         "addressCountry": "QA"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 25.2854,
-        "longitude": 51.5310
+        "latitude": 25.31929,
+        "longitude": 51.52798
     },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar",
     "areaServed": [
         { "@type": "Country", "name": "Qatar" },
         { "@type": "City", "name": "Doha" },

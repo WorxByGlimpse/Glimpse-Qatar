@@ -7,9 +7,6 @@
 | Domain | `https://www.theglimpseproject.qa` | everywhere. Run `python3 scripts/seo.py --set-domain https://<real domain>` |
 | Phone | `+974 0000 0000`, `+97400000000` | `js/footer.js`, `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, `llms.txt` |
 | WhatsApp | `wa.me/97400000000` | `js/footer.js` |
-| Office address | `[QATAR OFFICE ADDRESS]` | same files as phone |
-| Google Maps link | `href="#!"` on the two footer address links | `js/footer.js` |
-| Coordinates | `25.2854`, `51.5310` (Doha centre) | `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html` (schema + geo meta) |
 | GA4 ID | `G-XXXXXXXXXX` | `index.html`, `landing/booking.html`, `landing/packages.html`, `js/header.js` |
 | GTM ID | `GTM-XXXXXXX` | 74 pages, find and replace |
 
@@ -75,7 +72,10 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 Done: formal B2B tone on the homepage, contact and careers pages. Global brands lead the homepage portfolio scroller, the portfolio grid and the testimonials. Four new industry pages (sports and events, real estate, hospitality and tourism, banking and finance), government page rewritten, all industry pages have meta descriptions. Six Qatar blog posts. WhatsApp is the primary call to action, company field on the contact form, Sunday to Thursday 9:00 to 18:00 shown in the footer, contact page, schema and `llms.txt`. Maroon licence mark in the footer. Doha skyline on the contact page.
 
 Open:
-- FIFA World Cup Qatar 2022: the logo now leads the client grids. Waiting on a description of the work before writing anything about it.
+- Office address is set: C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar. Coordinates 25.31929, 51.52798 (Tornado Tower, West Bay, from OpenStreetMap). The footer links to a Google Maps search for the tower; swap in the Google Business Profile link once it exists.
+- FIFA must not be used: the work was done through a partner in Qatar whose name cannot be disclosed. The FIFA logo is removed from both client grids and the word FIFA appears nowhere in the site copy. Do not add it back. The live UAE site still shows the same FIFA logo on its clients page.
+- Hisense World Cup work may be mentioned. The Sports and Events page has one sentence. It can become a case study once the scope is written down (channels, deliverables, results).
+- One existing image still contains the tournament logo: the Gorenje creative on `pages/services/influencer-mgmt.html` (a Hisense Group brand, shown as an official sponsor ad). Decide whether to keep it.
 - Arabic version: not started, by decision. Needs RTL layout, an Arabic typeface (Poppins has no Arabic glyphs) and native-speaker review. `scripts/seo.py` is ready for an `ar-QA` alternate.
 - Image credit: `static/images/qatar/doha-skyline-night.jpg` is by Akbar Nemati on Unsplash (photo ID Q8NuHm4PbXc), used under the Unsplash License. Attribution is not required. Replace with Glimpse's own Doha photography when available.
 - The six new blog posts reuse header images from older posts. Replace with new artwork.

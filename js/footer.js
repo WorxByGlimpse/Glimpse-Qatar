@@ -26,10 +26,10 @@ footer.innerHTML = `
     <div>
       <!-- Links -->
       <h6 class="fw-bold mb-4 gradient-text-small">Locations</h6>
-      <!-- TODO(Qatar): placeholder address, map link and phone. See QATAR-LAUNCH-CHECKLIST.md -->
+      <!-- TODO(Qatar): phone is still a placeholder. See QATAR-LAUNCH-CHECKLIST.md -->
       <div class="loc-col-item">
         <a href="#!" class="text-decoration-none text-white">Qatar</a>
-        <p class="sub-location"><a href="#!" title="Address">[QATAR OFFICE ADDRESS], Doha, Qatar</a><br><a href="tel:+97400000000">+974 0000 0000</a><br>Sunday to Thursday, 9:00 to 18:00</p>
+        <p class="sub-location"><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" title="Address">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar</a><br><a href="tel:+97400000000">+974 0000 0000</a><br>Sunday to Thursday, 9:00 to 18:00</p>
       </div>
       <div class="loc-col-item">
         <a href="https://www.theglimpseproject.com/" target="_blank" class="text-decoration-none text-white">United Arab Emirates</a>
@@ -182,7 +182,7 @@ footer.innerHTML = `
   <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 gap-4 px-4 text-white" style="font-size: 0.8rem">
     <p>All rights reserved 2026 © Glimpse Media LLC</p>
     <p class="qfc-licence">Licensed by the Qatar Financial Centre Authority · QFC No. 05559</p>
-    <p><a href="#!" class="text-white">[QATAR OFFICE ADDRESS], Doha, Qatar.</a></p>
+    <p><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" class="text-white">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar.</a></p>
   </div>
 </footer>
     `;
