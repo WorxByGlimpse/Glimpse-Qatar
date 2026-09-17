@@ -10,7 +10,7 @@
 | Office address | `[QATAR OFFICE ADDRESS]` | same files as phone |
 | Google Maps link | `href="#!"` on the two footer address links | `js/footer.js` |
 | Coordinates | `25.2854`, `51.5310` (Doha centre) | `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html` (schema + geo meta) |
-| GA4 ID | `G-XXXXXXXXXX` | `index.html`, `js/header.js` |
+| GA4 ID | `G-XXXXXXXXXX` | `index.html`, `landing/booking.html`, `landing/packages.html`, `js/header.js` |
 | GTM ID | `GTM-XXXXXXX` | 74 pages, find and replace |
 
 Find them all: `grep -rn "0000 0000\|97400000000\|QATAR OFFICE ADDRESS\|XXXXXXX\|TODO(Qatar)" --include="*.html" --include="*.js" --include="*.txt" .`
@@ -38,7 +38,7 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 ## 4. Bugs found on the UAE site while porting (fixed here, still live there)
 
 - Blog posts 28, 29 and 30 have a canonical pointing at blog post 27, so Google is told to ignore them. Post 31 points at a URL that does not exist.
-- 19 blog canonicals end in `.html`, which redirects.
+- Most blog canonicals (29 of 31) end in `.html`, which redirects.
 - `404.html` has a canonical pointing at `/blog`.
 - `faq.html` carries the SEM page's FAQ schema instead of its own 30 questions. The homepage FAQ schema also does not match the visible FAQ.
 - `sitemap.xml` is missing `/faq` and blogs 28 to 31, and lists `/blog`, which `robots.txt` blocks.
