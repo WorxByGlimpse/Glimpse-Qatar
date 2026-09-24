@@ -67,3 +67,62 @@
     -ms-transition: max-height 1s ease;
     -o-transition: max-height 1s ease;
 }
+
+/*------------------------------------------------------------------------------------*/
+/*------------------------------------ CASE STUDY ------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+.case-study {
+    max-width: 900px;
+    margin: var(--r40) auto 0;
+}
+
+.case-study h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.case-study h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+}
+
+.case-study p {
+    margin-bottom: 1.1rem;
+    line-height: 1.8;
+}
+
+.case-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-results li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.7;
+}
+
+.case-results li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fcdc00;
+}
+
+.case-note {
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    opacity: 0.65;
+}
+
+@media (max-width: 576px) {
+    .case-study h2 { font-size: 1.3rem; }
+}

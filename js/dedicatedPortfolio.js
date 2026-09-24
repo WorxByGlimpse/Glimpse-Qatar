@@ -12,6 +12,7 @@ window.onload = () => {
         3: {
             title: "Hisense",
             paragraph: "Hisense is a leading global electronics brand that offers a wide range of cutting-edge consumer electronics and home appliances. Known for their innovative technology and high-quality products, Hisense provides televisions, refrigerators, air conditioners, washing machines, and more. With a focus on delivering superior performance, energy efficiency, and user-friendly features, Hisense caters to the needs of modern households and ensures an enhanced entertainment and living experience.",
+                    caseStudy: "<div class='case-study'><h2>Bringing football\u2019s biggest moments to life</h2><p>As Hisense\u2019s social and digital partner, Glimpse ran an always-on programme across social, creative, content production, influencer and talent management, community management, paid media and experiential activations. The work covered product launches, retail moments, promotional offers and the brand\u2019s global sporting sponsorships, connecting the Hisense product range with culturally relevant moments across the region.</p><p>Hisense is an official sponsor of major international football tournaments, including the FIFA World Cup 2022, UEFA EURO 2024 and the FIFA Club World Cup 2025. Through the brand\u2019s sponsorships we produced football-led content and branded entertainment for Hisense, including a podcast series featuring well-known football personalities, tournament campaigns and social competitions.</p><p>For the FIFA Club World Cup 2025, that ran as a 10-day activation at Mall of the Emirates with a gaming arena, a product experience zone, kids\u2019 activities, a photo booth and live radio integrations, supported by teasers, Reels, Stories, creator content and competitions.</p><p>Alongside the creative and experiential work, we managed paid media across product launches, promotional periods and retail offers, with conversion-focused creative and dark ads built for specific offers and audiences. Performance was tracked against agreed KPIs and optimised throughout the campaign.</p><h3>Results</h3><ul class='case-results'><li>7,000+ visitors to the Mall of the Emirates activation</li><li>+152% organic follower growth</li><li>Coverage in Gulf News, Sky News Arabia, Loving Dubai and That Dubai Page</li><li>Gold for Best Viral Campaign at the MENA Digital Awards</li></ul><p class='case-note'>All tournament activity was produced for Hisense as the brand\u2019s agency.</p></div>",
         },
         4: {
             title: "Al-Ain",
@@ -111,6 +112,8 @@ window.onload = () => {
         </div>
     
         <p>${portfolioDetails[pageId].paragraph}</p>
+    
+        ${portfolioDetails[pageId].caseStudy || ""}
     
         <div id="hero-video-wrapper">
             <video id="hero-video" autoplay loop muted playsinline
