@@ -6,16 +6,6 @@ let slider_outer = document.querySelector(".portfolio__section");
 let sections = gsap.utils.toArray(".parallax__item");
 let images = [...document.querySelectorAll(".parallax__image")];
 // let overlay = document.querySelector(".fullview__section");
-let titles = [
-  "UAE Pavilion",
-  "Chaumet",
-  "Lamborghini",
-  "Hisense",
-  "Genesis",
-  "Roxy Cinemas",
-  "Hyundai",
-  "Al Ain",
-];
 let maxWidth = 0;
 let current = 0;
 let target = 0;

@@ -56,6 +56,6 @@ let sliderImage = document.querySelectorAll(".portfolio-swiper-slide");
 sliderImage.forEach(
   (image, i) =>
     (image.style.backgroundImage = `url(https://d3i7ke5fj3tp7c.cloudfront.net/images/portfolio/${
-      i + 1
+      image.dataset.img || i + 1
     }.webp)`)
 );
