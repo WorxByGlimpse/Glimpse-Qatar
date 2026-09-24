@@ -114,19 +114,7 @@ footer.innerHTML = `
         <a href="/pages/industries/banking-and-finance" class="text-decoration-none text-white">Banking & Finance</a>
       </p>
       <p>
-      <a href="/pages/industries/luxury-and-fashion" class="text-decoration-none text-white">Luxury & Fashion</a>
-      </p>
-      <p>
-      <a href="/pages/industries/food-and-beverages" class="text-decoration-none text-white">Food & Beverages</a>
-      </p>
-      <p>
-        <a href="/pages/industries/entertainment" class="text-decoration-none text-white">Entertainment</a>
-      </p>
-      <p>
-        <a href="/pages/industries/automotive" class="text-decoration-none text-white">Automotive</a>
-      </p>
-      <p>
-        <a href="/pages/industries/electronics-and-appliances" class="text-decoration-none text-white">Electronics&nbsp;&&nbsp;Appliances</a>
+        <a href="/pages/industries/luxury-and-fashion" class="text-decoration-none text-white">Luxury & Fashion</a>
       </p>
     </div>
     <!-- Grid column -->

@@ -85,3 +85,8 @@ Open:
 - Privacy policy still has a GDPR section and nothing local. As a QFC company, Glimpse Media LLC most likely falls under the QFC Data Protection Regulations. Needs a lawyer.
 - The "Licensed by the Qatar Financial Centre Authority" line is text only. Check the QFC's rules before using any official QFC or Media City logo.
 - Off-site: Doha Google Business Profile and local directory listings, using the exact name, address and phone shown on the site.
+
+## 8. Layout notes
+
+- The clients page stacks logos in hand-balanced columns (`.client_col`), centred vertically, so the column counts create a deliberate symmetric wave. Removing or adding a logo breaks that symmetry and must be rebalanced. UAE pattern is [12,13,14,13,14,13,12] for 91 logos; with 90 (FIFA removed) the Qatar site uses [12,13,13,14,13,13,12] desktop and [17,17,18,17,17] mobile.
+- The footer grid row looks wrong as soon as one column is much taller than the others. Keep the Industries column to 6 links, matching the UAE design. All 10 industry pages stay reachable through the "Other industries" cross-links at the bottom of every industry page, so none is orphaned.
