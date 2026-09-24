@@ -1,38 +1,89 @@
 # Glimpse Qatar launch checklist
 
-## 1. Placeholders to replace
+Preview: https://glimpse-qatar-glimpse-project.vercel.app (auto-deploys from `main`, served `noindex` because it is a `*.vercel.app` host).
 
-| What | Placeholder in the code | Where |
+Status: the site is content-complete and verified. 96 pages render with no console
+errors and no broken internal links. What is left is real-world data, legal sign-off
+and the go-live sequence.
+
+---
+
+## 1. Blocked on Marwan: information I need
+
+| # | Item | Where it goes | Notes |
+|---|---|---|---|
+| 1 | **Live domain** | everywhere | Then `python3 scripts/seo.py --set-domain https://<domain>` rewrites every canonical, hreflang, sitemap URL and robots line in one command. |
+| 2 | **Phone number** | `js/footer.js`, `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, `llms.txt` | Currently `+974 0000 0000`. Visible on every page and in the click-to-call button. |
+| 3 | **WhatsApp number** | `js/footer.js`, `index.html`, `contactus.html` | Currently `wa.me/97400000000`. This is the primary call to action, so it is the most visible placeholder. |
+| 4 | **GA4 measurement ID** | 4 files | Currently `G-XXXXXXXXXX`. |
+| 5 | **GTM container ID** | 84 files | Currently `GTM-XXXXXXX`. One find-and-replace. |
+| 6 | **Qatar email address** | `js/header.js`, `js/footer.js`, `llms.txt` | Currently the shared `hello@theglimpseproject.com`. |
+| 7 | **MENA Digital Awards Gold: which year?** | `awards.html` | Every entry on that page carries a year. Without it the Hisense award is only in the case study, not the awards page. |
+
+## 2. Blocked on Marwan: decisions
+
+| # | Decision | Default if nothing changes |
 |---|---|---|
-| Domain | `https://www.theglimpseproject.qa` | everywhere. Run `python3 scripts/seo.py --set-domain https://<real domain>` |
-| Phone | `+974 0000 0000`, `+97400000000` | `js/footer.js`, `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, `llms.txt` |
-| WhatsApp | `wa.me/97400000000` | `js/footer.js` |
-| GA4 ID | `G-XXXXXXXXXX` | `index.html`, `landing/booking.html`, `landing/packages.html`, `js/header.js` |
-| GTM ID | `GTM-XXXXXXX` | 74 pages, find and replace |
+| 8 | **Forms.** Contact, careers and booking post to the UAE Formspree inboxes (`mnqrlako`, `mknaallp`, `xbdwvvjj`), tagged "Glimpse QATAR website". | Qatar leads keep landing in the UAE inboxes. |
+| 9 | **Live chat.** Chatwoot token in `js/footer.js` is the UAE one. | Shared inbox. |
+| 10 | **Calendly.** `calendly.com/hello-theglimpseproject/30min` on the booking page. | Shared calendar. |
+| 11 | **Social profiles.** Footer and schema point at the group accounts. | Shared accounts. |
+| 12 | **Gorenje creative** on `pages/services/influencer-mgmt.html` still has the tournament logo printed in it (an official sponsor's own ad). | Stays. |
+| 13 | **Blog byline** is "Glimpse Qatar" on the six new posts. | Stays. |
 
-Find them all: `grep -rn "0000 0000\|97400000000\|QATAR OFFICE ADDRESS\|XXXXXXX\|TODO(Qatar)" --include="*.html" --include="*.js" --include="*.txt" .`
+## 3. Legal review
 
-## 2. Still shared with the UAE site (decide per item)
+| # | Item | Why |
+|---|---|---|
+| 14 | **Terms of Use governing law** says "laws of the State of Qatar" and "courts of the State of Qatar". | Glimpse Media LLC is a QFC company. The QFC has its own regulations and its own court, so the clause may need to name those instead. |
+| 15 | **Privacy policy** has a GDPR section and nothing local. | A QFC company most likely falls under the QFC Data Protection Regulations. |
+| 16 | **Advertising page** says "plan and execute" campaigns across "traditional OOH (billboards, transit)" and lists "Billboards / Hoardings". | The QFC licence says the firm may not physically place advertising material, including on billboards, unless the QFCA permits it. Planning and designing is covered; "execute" is ambiguous. |
+| 17 | **Influencer disclosure wording** is general ("follows Qatar's applicable advertising and media regulations"). | Should be checked by someone who knows the local rules. No regulator or law is named. |
+| 18 | **QFC / Media City logos** are not used. The footer carries a text-only licence line. | Check the QFC's brand rules before adding any official mark. |
 
-- Formspree forms: contact `mnqrlako`, careers `mknaallp`, booking `xbdwvvjj`. Submissions land in the UAE inboxes, tagged "Glimpse QATAR website" in the subject. Create Qatar forms and swap the `action` URLs.
-- Chatwoot live chat token in `js/footer.js`.
-- Calendly link `hello-theglimpseproject/30min` in `landing/booking.html`.
-- Email `hello@theglimpseproject.com`.
-- Social profiles (Instagram, Facebook, X, LinkedIn, TikTok).
-- Images and videos load from the same CloudFront bucket (read-only, no effect on the UAE site).
+## 4. Content still to swap
 
-## 3. hreflang needs the UAE site to link back
+| # | Item | Status |
+|---|---|---|
+| 19 | **Portfolio and clients** are the UAE set. | Intentional, per the original brief: swap for Qatar clients when they exist. The Hisense case study is the one piece of Qatar-relevant proof. |
+| 20 | **Doha photography.** The contact hero is an Unsplash stock photo of West Bay (`static/images/qatar/doha-skyline-night.jpg`, Akbar Nemati, Unsplash Licence, no attribution required). | Replace with Glimpse's own Doha imagery. |
+| 21 | **Blog artwork.** The six Qatar posts reuse header images from older posts. | Replace with new artwork. The National Day post has the weakest match. |
+| 22 | **Arabic version.** Not started, by decision. | Needs RTL layout, an Arabic typeface (Poppins has no Arabic glyphs) and native-speaker review. `scripts/seo.py` is ready for an `ar-QA` alternate. |
+| 23 | **`awards.html` says "since 2014"** while the rest of the site says founded 2016. There is a real 2014 award on the page. | Confirm which is right. |
+| 24 | **No `<h1>`** on `contactus`, `privacy-policy`, `terms-of-use`, `blog`, `landing/booking`, `landing/packages`. Their headings are `<p class="title">`. | Same on the UAE site. Worth fixing for SEO; left alone to keep the design identical. |
 
-hreflang only works when both sides reference each other. The Qatar pages are done.
-Once the Qatar domain is live, each UAE page needs this in its `<head>` (example for `/pages/services/seo`):
+## 5. Go-live sequence
+
+1. Add the domain in Vercel (project `glimpse-qatar`, team Glimpse), set `www` as primary, point DNS.
+2. Run `python3 scripts/seo.py --set-domain https://<domain>`, replace the placeholders in section 1, then `python3 scripts/seo.py --check`.
+3. Push. The `noindex` header only applies to `*.vercel.app`, so the real domain becomes indexable automatically.
+4. Google Search Console: add the property, submit `sitemap.xml`. Same for Bing Webmaster Tools.
+5. Create the Doha Google Business Profile using the exact name, address and phone on the site. Then swap the footer map link (currently a Google Maps search for Tornado Tower) for the profile link, and add opening hours and review rating back into the schema.
+6. **Add the return hreflang tags on the UAE site** (see section 6). Until this is done, the Qatar/UAE hreflang pairing is one-way and Google may ignore it.
+7. Local directory listings with the same name, address and phone.
+
+## 6. hreflang needs the UAE site to link back
+
+The Qatar pages are done. Once the Qatar domain is live, each UAE page needs this in its `<head>` (example for `/pages/services/seo`):
 
     <link rel="alternate" hreflang="en-AE" href="https://www.theglimpseproject.com/pages/services/seo">
     <link rel="alternate" hreflang="en-QA" href="https://<qatar domain>/pages/services/seo">
     <link rel="alternate" hreflang="x-default" href="https://www.theglimpseproject.com/pages/services/seo">
 
-`scripts/seo.py` can be ported to the UAE repo to generate these. Nothing has been changed in the UAE repo.
+`scripts/seo.py` can be ported to the UAE repo to generate these. Nothing in the UAE repo has been changed.
 
-## 4. Bugs found on the UAE site while porting (fixed here, still live there)
+## 7. Standing rules (do not break these)
+
+- **FIFA.** Glimpse must never be shown as having worked with or for FIFA, because it did not. The World Cup work in Qatar ran through a Qatari partner whose name also cannot be disclosed. The FIFA logo stays off the client grids. Tournament names may appear **only** as Hisense's own sponsorships, as in "Hisense is an official sponsor of ... including the FIFA World Cup 2022". Never "our FIFA campaign", never FIFA in a client list. Current mentions: the Hisense case study in `js/dedicatedPortfolio.js` and one paragraph on `pages/industries/sports-and-events.html`. The live UAE site still shows the FIFA logo on its clients page; if the restriction covers that site too, it needs removing there.
+- **No invented Qatar claims.** The copy says Glimpse has a team in Doha backed by the group founded in 2016 and named MENA Agency of the Year 2022-2023. It claims no history, clients or statistics in Qatar. The Hisense work is Hisense Middle East and the activation was in Dubai, so it is presented as regional experience, not Qatar client work.
+- **Legal entity** is Glimpse Media LLC, QFC number 05559, licensed by the Qatar Financial Centre Authority. The UAE entity "Glimpse Marketing FZ LLC" has been removed from this site. Source: the incorporation PDF, which is gitignored and must never be committed or deployed.
+- **Office address:** C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar. Coordinates 25.31929, 51.52798.
+- **SEO block.** Never hand-edit anything between `<!-- SEO:START -->` and `<!-- SEO:END -->`. Rerun `scripts/seo.py`. New pages with no UAE counterpart go in `QATAR_ONLY` in that script.
+- **Shared assets.** Images and videos load from the same CloudFront bucket as the UAE site (read-only). Lottie animations are self-hosted in `static/lottie/` because that bucket only sends CORS headers for the UAE domain.
+
+---
+
+## Appendix A. Bugs found on the UAE site while porting (fixed here, still live there)
 
 - Blog posts 28, 29 and 30 have a canonical pointing at blog post 27, so Google is told to ignore them. Post 31 points at a URL that does not exist.
 - Most blog canonicals (29 of 31) end in `.html`, which redirects.
@@ -46,47 +97,7 @@ Once the Qatar domain is live, each UAE page needs this in its `<head>` (example
 - `carousel.js` and `parallax-slider.js` throw on pages that do not have their elements (7 pages and `landing/packages`). Harmless, but noisy in the console.
 - The S3/CloudFront bucket only sends CORS headers for `www.theglimpseproject.com`, so Lottie animations (header logo, homepage services and client logos) fail on any other host, including the UAE site's own Vercel preview URL.
 
-## 5. Content to review
-
-- Legal entity is now Glimpse Media LLC, QFC number 05559, licensed by the Qatar Financial Centre Authority (Terms of Use, Privacy Policy, footer, schema, `llms.txt`). The UAE entity "Glimpse Marketing FZ LLC" has been removed. Source: the incorporation PDF, which is gitignored and must never be committed.
-- Terms of Use governing law currently says "laws of the State of Qatar" and "courts of the State of Qatar". Glimpse Media LLC is a QFC company, and the QFC has its own regulations and its own court. A lawyer should confirm whether the clause should name QFC law and the QFC court instead.
-- The QFC licence covers creating advertising campaigns and marketing and brand consultancy, and says the firm may not physically place advertising material, including on billboards, unless the QFCA permits it. `pages/services/advertising.html` says "We plan and execute campaigns across ... traditional OOH (billboards, transit)" and lists "Billboards | Hoardings". Planning and designing outdoor ads is covered. Confirm the wording is fine or soften "execute".
-- Removed from schema because they belong to the Dubai listing: Google Business Profile ID, the 4.8/26 review rating, opening hours. Add Qatar values when the Doha Google Business Profile exists.
-- Copy says Glimpse has a team in Doha, backed by the group founded in 2016 and MENA Agency of the Year 2022-2023. It does not claim history, clients or stats in Qatar.
-- Influencer page: the UAE NMC disclosure FAQ was replaced with general wording on paid partnership disclosure in Qatar. Worth a check by someone who knows the local rules.
-- `awards.html` body says "since 2014" while the rest of the site says 2016.
-- Portfolio and clients are unchanged, ready to be swapped for Qatar clients.
-- No `<h1>` on `contactus`, `privacy-policy`, `terms-of-use` and `landing/booking` (their headings are `<p class="title">`). Same on the UAE site. Worth fixing for SEO, left alone for now to keep the design identical.
-- No Arabic version yet. If one is added, extend the hreflang set in `scripts/seo.py` (`ar-QA`).
-
-## 6. Go-live
-
-1. Import the repo in Vercel, add the domain, set www as primary.
-2. Run `--set-domain`, replace the placeholders above, run `python3 scripts/seo.py --check`.
-3. Google Search Console: add the property, submit `sitemap.xml`. Same for Bing Webmaster Tools.
-4. Create the Doha Google Business Profile with the exact name, address and phone used on the site.
-5. Add the return hreflang tags on the UAE site (section 3).
-
-## 7. Qatar market round (done, with open items)
-
-Done: formal B2B tone on the homepage, contact and careers pages. Global brands lead the homepage portfolio scroller, the portfolio grid and the testimonials. Four new industry pages (sports and events, real estate, hospitality and tourism, banking and finance), government page rewritten, all industry pages have meta descriptions. Six Qatar blog posts. WhatsApp is the primary call to action, company field on the contact form, Sunday to Thursday 9:00 to 18:00 shown in the footer, contact page, schema and `llms.txt`. Maroon licence mark in the footer. Doha skyline on the contact page.
-
-Open:
-- Office address is set: C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar. Coordinates 25.31929, 51.52798 (Tornado Tower, West Bay, from OpenStreetMap). The footer links to a Google Maps search for the tower; swap in the Google Business Profile link once it exists.
-- Glimpse must never be shown as having worked with FIFA, because it did not. The World Cup work in Qatar was done through a partner whose name cannot be disclosed, so that partner is never named either. The FIFA logo stays off the client grids: do not add it back. The live UAE site still shows that logo on its clients page.
-- Tournament names may appear ONLY as Hisense's own sponsorships ("Hisense is an official sponsor of ... including the FIFA World Cup 2022"). Never "our FIFA campaign", never FIFA in a client list. Current mentions: the Hisense case study in `js/dedicatedPortfolio.js` and one paragraph on `pages/industries/sports-and-events.html`. The case study ends with the line "All tournament activity was produced for Hisense as the brand's agency."
-- The Hisense case study is live at `/pages/portfolio/hisense`, built from the scope Marwan supplied: always-on social, creative, content production, influencer and talent, community management, paid media and experiential; football content across the brand's FIFA World Cup 2022, UEFA EURO 2024 and FIFA Club World Cup 2025 sponsorships; the 10-day Mall of the Emirates activation. Results quoted: 7,000+ visitors, +152% organic follower growth, coverage in Gulf News, Sky News Arabia, Loving Dubai and That Dubai Page, Gold for Best Viral Campaign at the MENA Digital Awards.
-- The MENA Digital Awards Gold is NOT on `awards.html` yet: every entry there carries a year and the year for this one was not supplied. Add it once confirmed.
-- Note this is Hisense Middle East work and the activation was at Mall of the Emirates in Dubai, so it is regional experience, not Qatar client work. The copy does not claim otherwise.
-- One existing image still contains the tournament logo: the Gorenje creative on `pages/services/influencer-mgmt.html` (a Hisense Group brand, shown as an official sponsor ad). Decide whether to keep it.
-- Arabic version: not started, by decision. Needs RTL layout, an Arabic typeface (Poppins has no Arabic glyphs) and native-speaker review. `scripts/seo.py` is ready for an `ar-QA` alternate.
-- Image credit: `static/images/qatar/doha-skyline-night.jpg` is by Akbar Nemati on Unsplash (photo ID Q8NuHm4PbXc), used under the Unsplash License. Attribution is not required. Replace with Glimpse's own Doha photography when available.
-- The six new blog posts reuse header images from older posts. Replace with new artwork.
-- Privacy policy still has a GDPR section and nothing local. As a QFC company, Glimpse Media LLC most likely falls under the QFC Data Protection Regulations. Needs a lawyer.
-- The "Licensed by the Qatar Financial Centre Authority" line is text only. Check the QFC's rules before using any official QFC or Media City logo.
-- Off-site: Doha Google Business Profile and local directory listings, using the exact name, address and phone shown on the site.
-
-## 8. Layout notes
+## Appendix B. Layout rules (read before editing the clients page or footer)
 
 - The clients page stacks logos in hand-balanced columns (`.client_col`), centred vertically, so the column counts create a deliberate symmetric wave. Removing or adding a logo breaks that symmetry and must be rebalanced. UAE pattern is [12,13,14,13,14,13,12] for 91 logos; with 90 (FIFA removed) the Qatar site uses [12,13,13,14,13,13,12] desktop and [17,17,18,17,17] mobile.
 - The footer grid row looks wrong as soon as one column is much taller than the others. Keep the Industries column to 6 links, matching the UAE design. All 10 industry pages stay reachable through the "Other industries" cross-links at the bottom of every industry page, so none is orphaned.
