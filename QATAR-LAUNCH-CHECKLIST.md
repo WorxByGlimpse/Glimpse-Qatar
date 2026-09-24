@@ -1,5 +1,6 @@
 # Glimpse Qatar launch checklist
 
+Live domain: https://www.theglimpseproject.qa (apex redirects to www, 308).
 Preview: https://glimpse-qatar-glimpse-project.vercel.app (auto-deploys from `main`, served `noindex` because it is a `*.vercel.app` host).
 
 Status: the site is content-complete and verified. 96 pages render with no console
@@ -10,9 +11,10 @@ and the go-live sequence.
 
 ## 1. Blocked on Marwan: information I need
 
+Domain is done: `theglimpseproject.qa` was already the value used throughout the code, so no rewrite was needed.
+
 | # | Item | Where it goes | Notes |
 |---|---|---|---|
-| 1 | **Live domain** | everywhere | Then `python3 scripts/seo.py --set-domain https://<domain>` rewrites every canonical, hreflang, sitemap URL and robots line in one command. |
 | 2 | **Phone number** | `js/footer.js`, `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, `llms.txt` | Currently `+974 0000 0000`. Visible on every page and in the click-to-call button. |
 | 3 | **WhatsApp number** | `js/footer.js`, `index.html`, `contactus.html` | Currently `wa.me/97400000000`. This is the primary call to action, so it is the most visible placeholder. |
 | 4 | **GA4 measurement ID** | 4 files | Currently `G-XXXXXXXXXX`. |
@@ -101,3 +103,11 @@ The Qatar pages are done. Once the Qatar domain is live, each UAE page needs thi
 
 - The clients page stacks logos in hand-balanced columns (`.client_col`), centred vertically, so the column counts create a deliberate symmetric wave. Removing or adding a logo breaks that symmetry and must be rebalanced. UAE pattern is [12,13,14,13,14,13,12] for 91 logos; with 90 (FIFA removed) the Qatar site uses [12,13,13,14,13,13,12] desktop and [17,17,18,17,17] mobile.
 - The footer grid row looks wrong as soon as one column is much taller than the others. Keep the Industries column to 6 links, matching the UAE design. All 10 industry pages stay reachable through the "Other industries" cross-links at the bottom of every industry page, so none is orphaned.
+
+## Appendix C. UAE Pavilion removal
+
+Removed entirely on request: the portfolio page and its `dedicatedPortfolio.js` entry (id 2, now unused), the `llms.txt` line, the sitemap entry, the client logo on `clients.html` (both grids), and the logos and carousel slides on `government`, `ar`, `digital-strategy`, `video-production`, `social-media` and `reputation-mgmt`. Both grids were rebalanced ([12,13,13,13,13,13,12] desktop, [17,17,17,17,17] mobile) and the two carousels left with a single slide had their indicator rows removed.
+
+Still present, because each is shared with another brand or is a separate client:
+- `EXPO-LG.json` and `UAE-DISNEY.json` on the homepage client animations. Each pairs two logos, so removing one drops LG or Disney with it.
+- Expo 2020 as its own client logo on `clients.html` (both grids and the top carousel image) and on `pages/services/photography.html` (logo and a portfolio photo).

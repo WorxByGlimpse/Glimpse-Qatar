@@ -5,10 +5,6 @@ window.onload = () => {
             title: "Chaumet",
             paragraph: "Chaumet is a renowned luxury brand known for its exquisite jewelry and watches. With a rich heritage dating back to 1780, Chaumet offers a wide range of meticulously crafted pieces that embody elegance, sophistication, and timeless beauty. From dazzling diamond rings to stunning tiaras and high-end timepieces, Chaumet caters to individuals who appreciate the finest craftsmanship and exquisite design.",
         },
-        2: {
-            title: "UAE-Pavilion",
-            paragraph: "The UAE Pavilion at Expo 2020 is a magnificent showcase of the United Arab Emirates' rich culture, innovation, and aspirations. It offers a captivating journey through immersive exhibits, interactive displays, and captivating storytelling, highlighting the nation's achievements, heritage, and vision for the future. From awe-inspiring architecture to thought-provoking exhibits, the UAE Pavilion at Expo 2020 provides visitors with a unique opportunity to explore the UAE's contributions to various sectors and experience the essence of Emirati hospitality.",
-        },
         3: {
             title: "Hisense",
             paragraph: "Hisense is a leading global electronics brand that offers a wide range of cutting-edge consumer electronics and home appliances. Known for their innovative technology and high-quality products, Hisense provides televisions, refrigerators, air conditioners, washing machines, and more. With a focus on delivering superior performance, energy efficiency, and user-friendly features, Hisense caters to the needs of modern households and ensures an enhanced entertainment and living experience.",
