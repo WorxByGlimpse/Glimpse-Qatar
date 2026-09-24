@@ -15,10 +15,10 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 
 | # | Item | Where it goes | Notes |
 |---|---|---|---|
-| 2 | **Phone number** | `js/footer.js`, `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, `llms.txt` | Currently `+974 0000 0000`. Visible on every page and in the click-to-call button. |
-| 3 | **WhatsApp number** | `js/footer.js`, `index.html`, `contactus.html` | Currently `wa.me/97400000000`. This is the primary call to action, so it is the most visible placeholder. |
-| 4 | **GA4 measurement ID** | 4 files | Currently `G-XXXXXXXXXX`. |
-| 5 | **GTM container ID** | 84 files | Currently `GTM-XXXXXXX`. One find-and-replace. |
+| 2 | **Phone number** | see below | **Pulled from the site** so nothing false is published. To restore: footer Locations block and Get in touch box in `js/footer.js`, the floating call button (`#call-btn`, removed with `#wtsp-btn`), and `"telephone"` in the schema in `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, plus the Phone line in `llms.txt`. |
+| 3 | **WhatsApp number** | see below | **Pulled from the site.** To restore: the floating `#wtsp-btn` in `js/footer.js`, the CTA pair on `contactus.html` and the CTA row on `index.html`. The contact page copy also used to say WhatsApp was the fastest way to reach us. |
+| 4 | **GA4 measurement ID** | 4 files | **Pulled.** Every file that had a snippet now carries an `<!-- ANALYTICS: ... -->` marker showing where it went. No analytics are being collected. |
+| 5 | **GTM container ID** | 84 files | **Pulled**, same marker. |
 | 6 | **Qatar email address** | `js/header.js`, `js/footer.js`, `llms.txt` | Currently the shared `hello@theglimpseproject.com`. |
 | 7 | **MENA Digital Awards Gold: which year?** | `awards.html` | Every entry on that page carries a year. Without it the Hisense award is only in the case study, not the awards page. |
 
@@ -55,6 +55,11 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 | 24 | **No `<h1>`** on `contactus`, `privacy-policy`, `terms-of-use`, `blog`, `landing/booking`, `landing/packages`. Their headings are `<p class="title">`. | Same on the UAE site. Worth fixing for SEO; left alone to keep the design identical. |
 
 ## 5. Go-live sequence
+
+> Contact numbers and analytics were deliberately removed on 2026-09-24 so the site could go live
+> without publishing a fake phone number or a dead tracking ID. Restore them before or right after
+> launch: search for `ANALYTICS:` and `TODO(Qatar)` to find every spot.
+
 
 1. Add the domain in Vercel (project `glimpse-qatar`, team Glimpse), set `www` as primary, point DNS.
 2. Run `python3 scripts/seo.py --set-domain https://<domain>`, replace the placeholders in section 1, then `python3 scripts/seo.py --check`.
