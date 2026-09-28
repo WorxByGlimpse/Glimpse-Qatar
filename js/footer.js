@@ -26,10 +26,9 @@ footer.innerHTML = `
     <div>
       <!-- Links -->
       <h6 class="fw-bold mb-4 gradient-text-small">Locations</h6>
-      <!-- TODO(Qatar): no phone number yet. Add it here, in the Get in touch box, the floating buttons and the schema. -->
       <div class="loc-col-item">
         <a href="#!" class="text-decoration-none text-white">Qatar</a>
-        <p class="sub-location"><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" title="Address">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar</a><br>Sunday to Thursday, 9:00 to 18:00</p>
+        <p class="sub-location"><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" title="Address">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar</a><br><a href="tel:+97433303227">+974 3330 3227</a><br>Sunday to Thursday, 9:00 to 18:00</p>
       </div>
       <div class="loc-col-item">
         <a href="https://www.theglimpseproject.com/" target="_blank" class="text-decoration-none text-white">United Arab Emirates</a>
@@ -162,6 +161,8 @@ footer.innerHTML = `
         <a href="mailto:hello@theglimpseproject.com" target="_blank">
           hello@theglimpseproject.com
         </a>
+        <hr />
+        <a href="tel:+97433303227"> +974 3330 3227 </a>
       </div>
     </div>
   </div>
@@ -174,7 +175,22 @@ footer.innerHTML = `
     `;
 
 // Adding extra floating buttons
-// TODO(Qatar): the floating WhatsApp and call buttons were removed until a Qatar number exists.
+// TODO(Qatar): the floating WhatsApp button is still out, no WhatsApp number confirmed yet.
+var extraButtons = document.createElement("div");
+extraButtons.setAttribute("id", "extra-btns");
+extraButtons.innerHTML = `
+<div id="call-btn">
+  <a href="tel:+97433303227">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
+    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+      <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+      <path d="M 57.332 70.088 c -1.955 0.001 -4.074 -0.313 -6.32 -0.946 c -6.303 -1.777 -12.904 -5.885 -18.586 -11.568 c -5.682 -5.682 -9.79 -12.283 -11.568 -18.586 c -1.84 -6.528 -0.978 -11.999 2.429 -15.406 c 0.124 -0.124 0.25 -0.244 0.38 -0.36 c 0.033 -0.046 0.07 -0.09 0.112 -0.131 l 1.819 -1.819 c 0.877 -0.877 2.042 -1.36 3.282 -1.36 c 1.24 0 2.405 0.483 3.282 1.36 l 6.976 6.977 c 1.809 1.809 1.809 4.754 0 6.563 L 36.149 37.8 c -0.753 0.753 -0.753 1.979 0 2.732 L 49.468 53.85 c 0.729 0.729 2.002 0.729 2.732 0 l 2.988 -2.988 c 1.809 -1.808 4.755 -1.81 6.564 -0.001 l 6.977 6.977 c 0.876 0.876 1.359 2.042 1.359 3.281 s -0.483 2.405 -1.359 3.281 l -1.819 1.819 c -0.042 0.042 -0.087 0.08 -0.133 0.114 c -0.117 0.13 -0.236 0.256 -0.36 0.379 C 64.182 68.948 61.058 70.088 57.332 70.088 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+    </g>
+  </svg>
+  </a>
+</div>
+`;
+document.getElementsByTagName("body")[0].appendChild(extraButtons);
 
 // CHATWOOT
 function createContactButtons() {
@@ -196,7 +212,9 @@ function createContactButtons() {
     //Wait for chatwoot to load
     window.addEventListener("chatwoot:ready", function () {
       //Fly In for all buttons
+      var callBtn = document.querySelector("#call-btn > a");
       var chatBtn = document.querySelector(".woot--bubble-holder .woot-widget-bubble");
+      if (callBtn) callBtn.style.display = "block";
       if (chatBtn) chatBtn.style.display = "block";
     })
   }

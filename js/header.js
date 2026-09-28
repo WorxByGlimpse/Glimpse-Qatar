@@ -32,6 +32,7 @@ header.outerHTML = `
     },
     "description": "Digital marketing agency in Doha, Qatar. SEO, social media, paid media, branding, content production and AR.",
     "url": "https://www.theglimpseproject.qa/",
+    "telephone": "+97433303227",
     "logo": "https://www.theglimpseproject.qa/static/images/favicon.png",
     "image": "https://www.theglimpseproject.qa/static/images/favicon.png",
     "email": "hello@theglimpseproject.com",

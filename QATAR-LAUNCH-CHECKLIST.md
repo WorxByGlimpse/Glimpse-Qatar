@@ -15,8 +15,8 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 
 | # | Item | Where it goes | Notes |
 |---|---|---|---|
-| 2 | **Phone number** | see below | **Pulled from the site** so nothing false is published. To restore: footer Locations block and Get in touch box in `js/footer.js`, the floating call button (`#call-btn`, removed with `#wtsp-btn`), and `"telephone"` in the schema in `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, plus the Phone line in `llms.txt`. |
-| 3 | **WhatsApp number** | see below | **Pulled from the site.** To restore: the floating `#wtsp-btn` in `js/footer.js`, the CTA pair on `contactus.html` and the CTA row on `index.html`. The contact page copy also used to say WhatsApp was the fastest way to reach us. |
+| 2 | ~~Phone number~~ | done | **+974 3330 3227**, restored 2026-09-28 in the footer Locations block, the Get in touch box, the floating call button, the contact page CTA, `llms.txt` and the `telephone` field in all four schema blocks. Previously pulled so nothing false is published. To restore: footer Locations block and Get in touch box in `js/footer.js`, the floating call button (`#call-btn`, removed with `#wtsp-btn`), and `"telephone"` in the schema in `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, plus the Phone line in `llms.txt`. |
+| 3 | **WhatsApp number** | still out | No WhatsApp number confirmed. +974 3330 3227 is a Qatar mobile so it may well be the same, but it was not stated, so nothing is published. **Pulled.** To restore: the floating `#wtsp-btn` in `js/footer.js`, the CTA pair on `contactus.html` and the CTA row on `index.html`. The contact page copy also used to say WhatsApp was the fastest way to reach us. |
 | 4 | **GA4 measurement ID** | 4 files | **Pulled.** Every file that had a snippet now carries an `<!-- ANALYTICS: ... -->` marker showing where it went. No analytics are being collected. |
 | 5 | **GTM container ID** | 84 files | **Pulled**, same marker. |
 | 6 | **Qatar email address** | `js/header.js`, `js/footer.js`, `llms.txt` | Currently the shared `hello@theglimpseproject.com`. |
@@ -68,6 +68,27 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 5. Create the Doha Google Business Profile using the exact name, address and phone on the site. Then swap the footer map link (currently a Google Maps search for Tornado Tower) for the profile link, and add opening hours and review rating back into the schema.
 6. **Add the return hreflang tags on the UAE site** (see section 6). Until this is done, the Qatar/UAE hreflang pairing is one-way and Google may ignore it.
 7. Local directory listings with the same name, address and phone.
+
+## 5b. DNS: Vercel nameservers do not work for this domain
+
+The `.qa` registry delegates to `ns1.vercel-dns.com` / `ns2.vercel-dns.com`, but those servers answer
+**REFUSED** for this zone: Vercel never created a DNS zone for it (`zone: false`, and
+`intendedNameservers` has been empty throughout). The result is SERVFAIL everywhere and the domain does
+not resolve at all. `create_or_transfer_domain` with `zone: true` flipped `serviceType` to `zeit.world`
+and verified the nameservers, but still did not create the zone, and the DNS records endpoint returns
+401 for this API connection.
+
+Vercel's edge is correctly configured and already serves the site: `curl` to `76.76.21.21`,
+`76.76.21.164` and `66.33.60.34` with `Host: www.theglimpseproject.qa` all return 200 over HTTP. Only
+DNS is missing.
+
+Fix, at the registrar: put the nameservers back to `ns01.dns.nexus` / `ns02.dns.nexus`, then add
+
+    A      @      76.76.21.21
+    CNAME  www    cname.vercel-dns-0.com
+
+An `A` record of `76.76.21.21` on `www` also works and was verified. HTTPS will fail until DNS resolves,
+because Vercel cannot issue the certificate before then; it issues automatically once records are live.
 
 ## 6. hreflang needs the UAE site to link back
 
