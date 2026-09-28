@@ -1,6 +1,7 @@
 # Glimpse Qatar launch checklist
 
-Live domain: https://www.theglimpseproject.qa (apex redirects to www, 308).
+**LIVE since 2026-09-28** at https://www.theglimpseproject.qa (Let's Encrypt cert issued, no noindex header, 92 URLs in the sitemap).
+DNS: nameservers `ns01.dns.nexus` / `ns02.dns.nexus`, with `A @ 76.76.21.21` and `CNAME www cname.vercel-dns-0.com`. Vercel DNS was abandoned: its nameservers never served a zone for this domain.
 Preview: https://glimpse-qatar-glimpse-project.vercel.app (auto-deploys from `main`, served `noindex` because it is a `*.vercel.app` host).
 
 Status: the site is content-complete and verified. 96 pages render with no console
@@ -69,26 +70,16 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 6. **Add the return hreflang tags on the UAE site** (see section 6). Until this is done, the Qatar/UAE hreflang pairing is one-way and Google may ignore it.
 7. Local directory listings with the same name, address and phone.
 
-## 5b. DNS: Vercel nameservers do not work for this domain
+## 5b. DNS (resolved)
 
-The `.qa` registry delegates to `ns1.vercel-dns.com` / `ns2.vercel-dns.com`, but those servers answer
-**REFUSED** for this zone: Vercel never created a DNS zone for it (`zone: false`, and
-`intendedNameservers` has been empty throughout). The result is SERVFAIL everywhere and the domain does
-not resolve at all. `create_or_transfer_domain` with `zone: true` flipped `serviceType` to `zeit.world`
-and verified the nameservers, but still did not create the zone, and the DNS records endpoint returns
-401 for this API connection.
-
-Vercel's edge is correctly configured and already serves the site: `curl` to `76.76.21.21`,
-`76.76.21.164` and `66.33.60.34` with `Host: www.theglimpseproject.qa` all return 200 over HTTP. Only
-DNS is missing.
-
-Fix, at the registrar: put the nameservers back to `ns01.dns.nexus` / `ns02.dns.nexus`, then add
+Vercel's nameservers never created a zone for this domain, so while the `.qa` registry delegated to
+them the domain returned SERVFAIL everywhere. Fixed by delegating back to `ns01.dns.nexus` /
+`ns02.dns.nexus` and pointing records at Vercel's edge:
 
     A      @      76.76.21.21
     CNAME  www    cname.vercel-dns-0.com
 
-An `A` record of `76.76.21.21` on `www` also works and was verified. HTTPS will fail until DNS resolves,
-because Vercel cannot issue the certificate before then; it issues automatically once records are live.
+Do not switch this domain to Vercel nameservers again unless Vercel reports `zone: true` first.
 
 ## 6. hreflang needs the UAE site to link back
 
