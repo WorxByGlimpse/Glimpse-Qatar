@@ -27,7 +27,7 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 
 | # | Decision | Default if nothing changes |
 |---|---|---|
-| 8 | **Forms.** Contact, careers and booking post to the UAE Formspree inboxes (`mnqrlako`, `mknaallp`, `xbdwvvjj`), tagged "Glimpse QATAR website". | Qatar leads keep landing in the UAE inboxes. |
+| 8 | **Forms.** Contact (`xjykjbao`) and careers (`mdekynwl`) now post to Qatar Formspree forms as of 2026-09-28. The booking form on `landing/booking.html` still posts to the UAE form `xbdwvvjj`. | Booking enquiries keep landing in the UAE inbox. |
 | 9 | **Live chat.** Chatwoot token in `js/footer.js` is the UAE one. | Shared inbox. |
 | 10 | **Calendly.** `calendly.com/hello-theglimpseproject/30min` on the booking page. | Shared calendar. |
 | 11 | **Social profiles.** Footer and schema point at the group accounts. | Shared accounts. |
