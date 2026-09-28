@@ -175,11 +175,37 @@ footer.innerHTML = `
     `;
 
 // Adding extra floating buttons
-// TODO(Qatar): the floating WhatsApp button is still out, no WhatsApp number confirmed yet.
 var extraButtons = document.createElement("div");
 extraButtons.setAttribute("id", "extra-btns");
 extraButtons.innerHTML = `
-<div id="call-btn">
+<div id="wtsp-btn">
+  <a target="_blank" href="https://wa.me/97433303227">
+  <svg width="50" height="50" viewBox="-400 -425 800 800" xml:space="preserve">
+  <g>
+    <path fill="#0D9F16" d="M398.75-24.55C398.75,194.91,220.8,373,1.33,373c-219.52,0-397.42-178.09-397.42-397.55
+      S-218.19-422,1.33-422C220.8-422,398.75-244.01,398.75-24.55z"/>
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#FCFCFC" d="M231.32-79.93C205.41-187.42,112.93-260.75,1.15-262.01
+          c-14.72,0.24-30.13,1.45-45.37,4.65C-200.16-225.79-280.96-52.9-204.95,86.69c1.96,3.74,2.11,6.76,1.03,10.62
+          c-10.11,36.8-20.12,73.6-30.19,110.27c-1.63,6.04-1.63,6.04,4.4,4.47c38.16-10.01,76.25-19.91,114.38-30.04
+          c3.16-0.85,5.64-0.49,8.53,0.96c49.11,25.09,100.84,32.46,155.01,21.96C177.63,179.84,262.21,48.2,231.32-79.93z M34.15,167.17
+          c-10.65,1.81-21.35,2.77-26.99,2.66c-41.47-0.12-75.29-9.41-106.39-28.23c-3.98-2.42-7.45-3.02-12.1-1.81
+          c-20.9,5.79-41.96,10.98-62.89,16.52c-4.4,1.33-4.82,0.36-3.71-3.62c5.55-19.9,10.77-39.69,16.5-59.36
+          c1.59-5.55,1.03-9.77-2.14-14.72c-43.01-69.13-41.2-155.27,6.94-219.22c50.01-66.6,118-93.86,199.35-76.49
+          c80.17,16.89,131.27,68.65,150.06,148.4C218.44,40.36,144.42,148.83,34.15,167.17z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#FDFDFD" d="M62.86,86.94c-8.41,0.36-16.44-1.57-24.49-3.74
+          C-15.77,67.63-56.4,33.73-89.04-10.91c-12.34-16.77-23.76-34.14-27.56-55.02c-4.56-25.1,2.65-46.33,21.32-63.71
+          c5.94-5.43,24.04-7.84,31.28-4.34c2.69,1.33,4.4,3.74,5.52,6.28c6.84,16.29,13.6,32.33,20.3,48.62c1.27,3.14,0.72,6.15-0.69,9.29
+          c-3.44,7.48-8.96,13.51-14.57,19.42c-4.25,4.35-4.44,8.33-1.3,13.52C-35.62-5-9.17,18.16,25.43,32.04
+          c5.16,2.05,9.05,1.33,12.48-3.01c5.76-7.12,11.85-14.24,17.31-21.6c3.74-5.19,8.02-5.91,13.3-3.5
+          c11.43,5.19,22.86,10.62,34.3,16.05c2.56,1.09,5.1,2.42,7.63,3.62c11.58,5.79,11.47,5.91,10.47,18.7
+          c-1.93,24.97-20.66,37.29-42.86,43.44C73.18,87.05,67.99,87.18,62.86,86.94z"/>
+      </g>
+    </g>
+  </svg>
+  </a>
+</div>
+<div id="call-btn" style="margin-top: 20px;">
   <a href="tel:+97433303227">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -212,8 +238,10 @@ function createContactButtons() {
     //Wait for chatwoot to load
     window.addEventListener("chatwoot:ready", function () {
       //Fly In for all buttons
+      var wtspBtn = document.querySelector("#wtsp-btn > a");
       var callBtn = document.querySelector("#call-btn > a");
       var chatBtn = document.querySelector(".woot--bubble-holder .woot-widget-bubble");
+      if (wtspBtn) wtspBtn.style.display = "block";
       if (callBtn) callBtn.style.display = "block";
       if (chatBtn) chatBtn.style.display = "block";
     })
