@@ -32,23 +32,23 @@ header.outerHTML = `
     },
     "description": "Digital marketing agency in Doha, Qatar. SEO, social media, paid media, branding, content production and AR.",
     "url": "https://www.theglimpseproject.qa/",
-    "telephone": "+97433303227",
+    "telephone": "+97441477032",
     "logo": "https://www.theglimpseproject.qa/static/images/favicon.png",
     "image": "https://www.theglimpseproject.qa/static/images/favicon.png",
     "email": "hello@theglimpseproject.com",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17",
+        "streetAddress": "Unit 76, Level 21, Burj Doha, WestBay",
         "addressLocality": "Doha",
         "addressRegion": "Doha",
         "addressCountry": "QA"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 25.31929,
-        "longitude": 51.52798
+        "latitude": 25.32078,
+        "longitude": 51.53047
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Burj+Doha%2C+West+Bay%2C+Doha%2C+Qatar",
     "areaServed": [
         { "@type": "Country", "name": "Qatar" },
         { "@type": "City", "name": "Doha" },

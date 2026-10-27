@@ -16,7 +16,7 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 
 | # | Item | Where it goes | Notes |
 |---|---|---|---|
-| 2 | ~~Phone number~~ | done | **+974 3330 3227**, restored 2026-09-28 in the footer Locations block, the Get in touch box, the floating call button, the contact page CTA, `llms.txt` and the `telephone` field in all four schema blocks. Previously pulled so nothing false is published. To restore: footer Locations block and Get in touch box in `js/footer.js`, the floating call button (`#call-btn`, removed with `#wtsp-btn`), and `"telephone"` in the schema in `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, plus the Phone line in `llms.txt`. |
+| 2 | ~~Phone number~~ | done | **+974 4147 7032** (replaced +974 3330 3227 on 2026-10-27), restored 2026-09-28 in the footer Locations block, the Get in touch box, the floating call button, the contact page CTA, `llms.txt` and the `telephone` field in all four schema blocks. Previously pulled so nothing false is published. To restore: footer Locations block and Get in touch box in `js/footer.js`, the floating call button (`#call-btn`, removed with `#wtsp-btn`), and `"telephone"` in the schema in `js/header.js`, `index.html`, `contactus.html`, `landing/packages.html`, plus the Phone line in `llms.txt`. |
 | 3 | **WhatsApp number** | still out | No WhatsApp number confirmed. +974 3330 3227 is a Qatar mobile so it may well be the same, but it was not stated, so nothing is published. **Pulled.** To restore: the floating `#wtsp-btn` in `js/footer.js`, the CTA pair on `contactus.html` and the CTA row on `index.html`. The contact page copy also used to say WhatsApp was the fastest way to reach us. |
 | 4 | **GA4 measurement ID** | 4 files | **Pulled.** Every file that had a snippet now carries an `<!-- ANALYTICS: ... -->` marker showing where it went. No analytics are being collected. |
 | 5 | **GTM container ID** | 84 files | **Pulled**, same marker. |
@@ -66,7 +66,7 @@ Domain is done: `theglimpseproject.qa` was already the value used throughout the
 2. Run `python3 scripts/seo.py --set-domain https://<domain>`, replace the placeholders in section 1, then `python3 scripts/seo.py --check`.
 3. Push. The `noindex` header only applies to `*.vercel.app`, so the real domain becomes indexable automatically.
 4. Google Search Console: add the property, submit `sitemap.xml`. Same for Bing Webmaster Tools.
-5. Create the Doha Google Business Profile using the exact name, address and phone on the site. Then swap the footer map link (currently a Google Maps search for Tornado Tower) for the profile link, and add opening hours and review rating back into the schema.
+5. Create the Doha Google Business Profile using the exact name, address and phone on the site. Then swap the footer map link (currently a Google Maps search for Burj Doha) for the profile link, and add opening hours and review rating back into the schema.
 6. **Add the return hreflang tags on the UAE site** (see section 6). Until this is done, the Qatar/UAE hreflang pairing is one-way and Google may ignore it.
 7. Local directory listings with the same name, address and phone.
 
@@ -96,7 +96,7 @@ The Qatar pages are done. Once the Qatar domain is live, each UAE page needs thi
 - **FIFA.** Glimpse must never be shown as having worked with or for FIFA, because it did not. The World Cup work in Qatar ran through a Qatari partner whose name also cannot be disclosed. The FIFA logo stays off the client grids. Tournament names may appear **only** as Hisense's own sponsorships, as in "Hisense is an official sponsor of ... including the FIFA World Cup 2022". Never "our FIFA campaign", never FIFA in a client list. Current mentions: the Hisense case study in `js/dedicatedPortfolio.js` and one paragraph on `pages/industries/sports-and-events.html`. The live UAE site still shows the FIFA logo on its clients page; if the restriction covers that site too, it needs removing there.
 - **No invented Qatar claims.** The copy says Glimpse has a team in Doha backed by the group founded in 2016 and named MENA Agency of the Year 2022-2023. It claims no history, clients or statistics in Qatar. The Hisense work is Hisense Middle East and the activation was in Dubai, so it is presented as regional experience, not Qatar client work.
 - **Legal entity** is Glimpse Media LLC, QFC number 05559, licensed by the Qatar Financial Centre Authority. The UAE entity "Glimpse Marketing FZ LLC" has been removed from this site. Source: the incorporation PDF, which is gitignored and must never be committed or deployed.
-- **Office address:** C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar. Coordinates 25.31929, 51.52798.
+- **Office address:** Unit 76, Level 21, Burj Doha, WestBay Doha, Qatar (moved from Tornado Tower on 2026-10-27). Coordinates 25.32078, 51.53047 (approximate, Burj Doha).
 - **SEO block.** Never hand-edit anything between `<!-- SEO:START -->` and `<!-- SEO:END -->`. Rerun `scripts/seo.py`. New pages with no UAE counterpart go in `QATAR_ONLY` in that script.
 - **Shared assets.** Images and videos load from the same CloudFront bucket as the UAE site (read-only). Lottie animations are self-hosted in `static/lottie/` because that bucket only sends CORS headers for the UAE domain.
 

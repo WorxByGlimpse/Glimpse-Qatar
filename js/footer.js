@@ -28,7 +28,7 @@ footer.innerHTML = `
       <h6 class="fw-bold mb-4 gradient-text-small">Locations</h6>
       <div class="loc-col-item">
         <a href="#!" class="text-decoration-none text-white">Qatar</a>
-        <p class="sub-location"><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" title="Address">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar</a><br><a href="tel:+97433303227">+974 3330 3227</a><br>Sunday to Thursday, 9:00 to 18:00</p>
+        <p class="sub-location"><a href="https://www.google.com/maps/search/?api=1&query=Burj+Doha%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" title="Address">Unit 76, Level 21, Burj Doha, WestBay Doha, Qatar</a><br><a href="tel:+97441477032">+974 4147 7032</a><br>Sunday to Thursday, 9:00 to 18:00</p>
       </div>
       <div class="loc-col-item">
         <a href="https://www.theglimpseproject.com/" target="_blank" class="text-decoration-none text-white">United Arab Emirates</a>
@@ -162,14 +162,14 @@ footer.innerHTML = `
           hello@theglimpseproject.com
         </a>
         <hr />
-        <a href="tel:+97433303227"> +974 3330 3227 </a>
+        <a href="tel:+97441477032"> +974 4147 7032 </a>
       </div>
     </div>
   </div>
   <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-5 gap-4 px-4 text-white" style="font-size: 0.8rem">
     <p>All rights reserved 2026 © Glimpse Media LLC</p>
     <p class="qfc-licence">Licensed by the Qatar Financial Centre Authority · QFC No. 05559</p>
-    <p><a href="https://www.google.com/maps/search/?api=1&query=Tornado+Tower%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" class="text-white">C/O Media City Qatar, Floor No. 16, Tornado Tower, No. 17, Doha, Qatar.</a></p>
+    <p><a href="https://www.google.com/maps/search/?api=1&query=Burj+Doha%2C+West+Bay%2C+Doha%2C+Qatar" target="_blank" rel="noopener" class="text-white">Unit 76, Level 21, Burj Doha, WestBay Doha, Qatar.</a></p>
   </div>
 </footer>
     `;
@@ -179,7 +179,7 @@ var extraButtons = document.createElement("div");
 extraButtons.setAttribute("id", "extra-btns");
 extraButtons.innerHTML = `
 <div id="wtsp-btn">
-  <a target="_blank" href="https://wa.me/97433303227">
+  <a target="_blank" href="https://wa.me/97441477032">
   <svg width="50" height="50" viewBox="-400 -425 800 800" xml:space="preserve">
   <g>
     <path fill="#0D9F16" d="M398.75-24.55C398.75,194.91,220.8,373,1.33,373c-219.52,0-397.42-178.09-397.42-397.55
@@ -206,7 +206,7 @@ extraButtons.innerHTML = `
   </a>
 </div>
 <div id="call-btn" style="margin-top: 20px;">
-  <a href="tel:+97433303227">
+  <a href="tel:+97441477032">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" viewBox="0 0 256 256" xml:space="preserve">
     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
       <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(33,150,243); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
